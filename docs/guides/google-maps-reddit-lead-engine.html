@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Build a Zero-Browser Google Maps + Reddit B2B Lead &amp; Buying-Intent Engine in 5 Minutes (Node.js, Python &amp; n8n) | Browserless Apify Scrapers</title>
+  <meta name="description" content="Skip Puppeteer timeouts and stacked enrichment add-ons. Pull Google Maps local businesses with built-in website emails and monitor live Reddit buying-intent threads for $1.50/1K."/>
+  <link rel="canonical" href="https://ketannsaint.github.io/apify-browserless-scrapers/guides/google-maps-reddit-lead-engine.html"/>
+  <meta property="og:title" content="Build a Zero-Browser Google Maps + Reddit B2B Lead &amp; Buying-Intent Engine in 5 Minutes (Node.js, Python &amp; n8n) | Browserless Apify Scrapers"/>
+  <meta property="og:description" content="Skip Puppeteer timeouts and stacked enrichment add-ons. Pull Google Maps local businesses with built-in website emails and monitor live Reddit buying-intent threads for $1.50/1K."/>
+  <meta property="og:url" content="https://ketannsaint.github.io/apify-browserless-scrapers/guides/google-maps-reddit-lead-engine.html"/>
+  <meta property="og:type" content="website"/>
+  <style>
+:root { --bg:#0b1020; --panel:#121933; --border:#243056; --text:#e8eefc; --muted:#9fb0d9; --accent:#38bdf8; --green:#10b981; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+header { border-bottom:1px solid var(--border); background:#0f162d; position:sticky; top:0; z-index:10; }
+.nav { max-width:1100px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.brand { font-weight:700; color:#fff; text-decoration:none; font-size:1.05rem; }
+.nav-links { display:flex; gap:16px; flex-wrap:wrap; font-size:.9rem; }
+.nav-links a { color:var(--muted); text-decoration:none; }
+.nav-links a:hover { color:var(--accent); }
+.wrap { max-width:1100px; margin:0 auto; padding:32px 20px 64px; }
+.hero { background:linear-gradient(135deg,#132145,#0e1b35); border:1px solid var(--border); border-radius:16px; padding:32px; margin-bottom:28px; }
+.hero h1 { margin:0 0 10px; font-size:2rem; line-height:1.2; }
+.hero p { color:var(--muted); margin:0 0 20px; font-size:1.02rem; }
+.cta-row { display:flex; gap:12px; flex-wrap:wrap; }
+.btn { display:inline-block; padding:10px 16px; border-radius:10px; font-weight:600; text-decoration:none; font-size:.9rem; cursor:pointer; border:none; }
+.btn-primary { background:var(--accent); color:#071324; }
+.btn-secondary { border:1px solid var(--border); color:#fff; background:rgba(255,255,255,.04); }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:18px 0 32px; }
+.card { background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:20px; display:flex; flex-direction:column; justify-content:space-between; }
+.card h3 { margin:0 0 8px; font-size:1.05rem; }
+.card p { margin:0 0 14px; color:var(--muted); font-size:.9rem; }
+.pill { display:inline-block; font-size:.73rem; font-weight:700; padding:3px 9px; border-radius:999px; background:rgba(16,185,129,.15); color:#6ee7b7; margin-bottom:8px; }
+.pill-blue { background:rgba(56,189,248,.15); color:#7dd3fc; }
+article, .panel { background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:28px; margin-bottom:22px; }
+article h1 { margin-top:0; font-size:1.85rem; }
+article h2 { margin-top:26px; padding-top:16px; border-top:1px solid var(--border); font-size:1.28rem; }
+article a, .panel a { color:var(--accent); }
+pre { background:#070b17; border:1px solid var(--border); border-radius:10px; padding:16px; overflow-x:auto; font-size:.84rem; }
+code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; background:rgba(56,189,248,.12); padding:2px 5px; border-radius:5px; font-size:.88em; }
+pre code { background:none; padding:0; }
+.table-wrap { overflow-x:auto; margin:14px 0; }
+table { width:100%; border-collapse:collapse; font-size:.89rem; }
+th,td { border:1px solid var(--border); padding:10px 12px; text-align:left; }
+th { background:#0d1429; color:#fff; }
+tr.ours { background:rgba(16,185,129,.08); }
+blockquote { border-left:3px solid var(--accent); margin:16px 0; padding:8px 16px; background:rgba(56,189,248,.06); color:#d8e6ff; }
+input, select { background:#070b17; color:#fff; border:1px solid var(--border); border-radius:8px; padding:9px 12px; font-size:.95rem; }
+.calc-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin:16px 0; }
+.stat-box { background:#0a1126; border:1px solid var(--border); border-radius:12px; padding:16px; }
+.stat-num { font-size:1.75rem; font-weight:800; color:#6ee7b7; }
+footer { border-top:1px solid var(--border); color:var(--muted); font-size:.86rem; padding:24px 20px; text-align:center; }
+footer a { color:var(--accent); }
+</style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Build a Zero-Browser Google Maps + Reddit B2B Lead & Buying-Intent Engine in 5 Minutes (Node.js, Python & n8n)","description":"Skip Puppeteer timeouts and stacked enrichment add-ons. Pull Google Maps local businesses with built-in website emails and monitor live Reddit buying-intent threads for $1.50/1K.","datePublished":"2026-11-28","author":{"@type":"Person","name":"Leopold Saint","url":"https://apify.com/leopoldsaint"}}</script>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="https://ketannsaint.github.io/apify-browserless-scrapers/">Browserless Apify Scrapers (60)</a>
+      <div class="nav-links">
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/">Catalog</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/compare.html">Honest Comparisons</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/calculator.html">Cost Calculator</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/guides/google-maps-reddit-lead-engine.html">Guides</a>
+        <a href="https://apify.com/leopoldsaint" target="_blank" rel="noopener">Apify Store ↗</a>
+      </div>
+    </nav>
+  </header>
+  <main class="wrap"><article><span class="pill">LEAD GEN · MAPS + REDDIT</span><h1>Build a Zero-Browser Google Maps + Reddit B2B Lead &amp; Buying-Intent Engine in 5 Minutes (Node.js, Python &amp; n8n)</h1><p>Most outbound lead pipelines break on two expensive bottlenecks:</p>
+<ul>
+<li><strong>Google Maps scrapers that stack 3 separate surcharges</strong> — charging per place, <em>plus</em> an add-on per website contact crawl, <em>plus</em> another add-on per search filter while spinning up heavy Chromium browsers.</li>
+<li><strong>Reddit scrapers that fail with HTTP 403/429</strong> because <code>.json</code> endpoints block datacenter IPs or require managing OAuth tokens.</li>
+</ul>
+<p>Below is a clean, browserless two-Actor workflow running on <strong>512 MB containers</strong> that handles both local-business lead generation (with built-in email/social enrichment) and live Reddit buying-intent monitoring in seconds — using a single <code>apify-client</code> call or a single n8n HTTP Request node.</p>
+<h2>The Two Live Actors Used</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Workflow</th>
+<th>Actor</th>
+<th>Key Advantage</th>
+<th>Price (Free / Gold+)</th>
+</tr></thead><tbody>
+<tr>
+<td>Local B2B Leads + Emails</td>
+<td><a href="https://apify.com/leopoldsaint/google-maps-leads-scraper" target="_blank" rel="noopener">Google Maps Scraper — Places, Leads, Emails &amp; Socials</a></td>
+<td>Direct HTTP + 3×3 coordinate grid tiling + <strong>free built-in website email, phone, social &amp; tech-stack extraction</strong></td>
+<td><code>$1.50</code> / <code>$0.90</code> per 1K places</td>
+</tr>
+<tr>
+<td>Live Buying-Intent Monitoring</td>
+<td><a href="https://apify.com/leopoldsaint/reddit-scraper-fast" target="_blank" rel="noopener">Reddit Scraper — Posts, Comments, Subreddits &amp; Search</a></td>
+<td>No login, no API keys; extracts search results, subreddit feeds, nested comments &amp; user profiles</td>
+<td><code>$1.50</code> / <code>$0.90</code> per 1K items</td>
+</tr>
+</tbody></table></div>
+<p>Both filter <strong>before</strong> billing — businesses skipped by <code>minRating</code>/<code>onlyWithEmail</code> and Reddit threads below <code>minUpvotes</code> cost <code>$0</code>.</p>
+<hr/>
+<h2>Recipe 1: Extract Local Business Leads With Verified Website Emails (Node.js / TypeScript)</h2>
+<pre><code class="lang-typescript">import { ApifyClient } from 'apify-client';
+
+const client = new ApifyClient({ token: process.env.APIFY_TOKEN });
+
+const run = await client.actor('leopoldsaint/google-maps-leads-scraper').call({
+    searchQueries: ['dentists', 'orthodontists'],
+    locations: ['Austin, TX', 'Dallas, TX'],
+    extractContacts: true,
+    maxContactPagesPerSite: 2,
+    minRating: 4.5,
+    onlyWithEmail: true,
+    maxPlacesPerQuery: 50,
+    maxTotalPlaces: 100,
+});
+
+const { items } = await client.dataset(run.defaultDatasetId).listItems();
+for (const lead of items.slice(0, 5)) {
+    console.log({
+        name: lead.name,
+        rating: lead.rating,
+        reviews: lead.reviewCount,
+        phone: lead.phone,
+        email: lead.bestEmail,
+        domainMatch: lead.emailDomainMatch,
+        techStack: lead.techStack,
+    });
+}</code></pre>
+<h3>What makes the built-in contact enricher different?</h3>
+<ul>
+<li>Visits each business's homepage and <code>/contact</code> or <code>/about</code> page over SSRF-hardened HTTP (blocking private/loopback redirects).</li>
+<li>Ranks emails to prefer domain-matching non-<code>noreply</code> addresses (<code>emailDomainMatch: true</code>).</li>
+<li>Extracts Instagram, Facebook, LinkedIn, X/Twitter, TikTok, and YouTube links plus CMS/pixel tech stack (<code>WordPress</code>, <code>Shopify</code>, <code>HubSpot</code>, <code>Meta Pixel</code>, <code>Google Tag Manager</code>) — <strong>all inside the flat <code>$1.50/1K</code> place price</strong>.</li>
+</ul>
+<hr/>
+<h2>Recipe 2: Monitor Reddit Threads Asking for Tool Recommendations (Python)</h2>
+<pre><code class="lang-python">import os
+from apify_client import ApifyClient
+
+client = ApifyClient(os.environ[&quot;APIFY_TOKEN&quot;])
+
+run = client.actor(&quot;leopoldsaint/reddit-scraper-fast&quot;).call(run_input={
+    &quot;searchQueries&quot;: [&quot;shopify app recommendation&quot;, &quot;crm alternative&quot;],
+    &quot;subreddits&quot;: [&quot;SaaS&quot;, &quot;entrepreneur&quot;],
+    &quot;sort&quot;: &quot;new&quot;,
+    &quot;timeRange&quot;: &quot;week&quot;,
+    &quot;includeComments&quot;: True,
+    &quot;maxCommentsPerPost&quot;: 5,
+    &quot;maxTotalItems&quot;: 50,
+})
+
+items = client.dataset(run[&quot;defaultDatasetId&quot;]).list_items().items
+posts = [i for i in items if i[&quot;itemType&quot;] == &quot;post&quot;]
+comments = [i for i in items if i[&quot;itemType&quot;] == &quot;comment&quot;]
+print(f&quot;Captured {len(posts)} high-intent posts and {len(comments)} nested comments.&quot;)</code></pre>
+<hr/>
+<h2>Recipe 3: Single-Node n8n / Make / Clay Automation (No Polling Loop)</h2>
+<p>Drop one <strong>HTTP Request</strong> node pointing to Apify's synchronous dataset endpoint:</p>
+<pre><code class="lang-bash">curl -X POST &quot;https://api.apify.com/v2/acts/leopoldsaint~google-maps-leads-scraper/run-sync-get-dataset-items?token=YOUR_APIFY_TOKEN&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{
+    &quot;searchQueries&quot;: [&quot;roofing contractors in Denver CO&quot;],
+    &quot;extractContacts&quot;: true,
+    &quot;onlyWithEmail&quot;: true,
+    &quot;maxTotalPlaces&quot;: 25
+  }'</code></pre>
+<p>And connect both Actors directly to <strong>Claude</strong>, <strong>Cursor</strong>, or <strong>ChatGPT</strong> via Apify's hosted MCP server (<code>https://mcp.apify.com</code>) using Actor IDs <code>leopoldsaint/google-maps-leads-scraper</code> and <code>leopoldsaint/reddit-scraper-fast</code>.</p>
+<p>Under Apify's <code>$5/month</code> free tier, you can pull <strong>~3,300 enriched Google Maps places or Reddit items per month at $0 out of pocket</strong>.</p></article></main>
+  <footer>
+    Built by <a href="https://apify.com/leopoldsaint" target="_blank" rel="noopener">Leopold Saint on Apify Store</a> ·
+    <a href="https://github.com/ketannsaint/apify-browserless-scrapers" target="_blank" rel="noopener">GitHub &amp; 22 n8n JSON Templates</a> ·
+    MCP: <code>https://mcp.apify.com</code> · Updated 2026-11-28
+  </footer>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Apify Scraper Run Cost Calculator (Free, Bronze, Silver, Gold)</title>
+  <meta name="description" content="Estimate exact pay-per-event run costs across all 60 browserless Apify Actors with $0 start fee and free $5/month Apify credits."/>
+  <link rel="canonical" href="https://ketannsaint.github.io/apify-browserless-scrapers/calculator.html"/>
+  <meta property="og:title" content="Apify Scraper Run Cost Calculator (Free, Bronze, Silver, Gold)"/>
+  <meta property="og:description" content="Estimate exact pay-per-event run costs across all 60 browserless Apify Actors with $0 start fee and free $5/month Apify credits."/>
+  <meta property="og:url" content="https://ketannsaint.github.io/apify-browserless-scrapers/calculator.html"/>
+  <meta property="og:type" content="website"/>
+  <style>
+:root { --bg:#0b1020; --panel:#121933; --border:#243056; --text:#e8eefc; --muted:#9fb0d9; --accent:#38bdf8; --green:#10b981; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+header { border-bottom:1px solid var(--border); background:#0f162d; position:sticky; top:0; z-index:10; }
+.nav { max-width:1100px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.brand { font-weight:700; color:#fff; text-decoration:none; font-size:1.05rem; }
+.nav-links { display:flex; gap:16px; flex-wrap:wrap; font-size:.9rem; }
+.nav-links a { color:var(--muted); text-decoration:none; }
+.nav-links a:hover { color:var(--accent); }
+.wrap { max-width:1100px; margin:0 auto; padding:32px 20px 64px; }
+.hero { background:linear-gradient(135deg,#132145,#0e1b35); border:1px solid var(--border); border-radius:16px; padding:32px; margin-bottom:28px; }
+.hero h1 { margin:0 0 10px; font-size:2rem; line-height:1.2; }
+.hero p { color:var(--muted); margin:0 0 20px; font-size:1.02rem; }
+.cta-row { display:flex; gap:12px; flex-wrap:wrap; }
+.btn { display:inline-block; padding:10px 16px; border-radius:10px; font-weight:600; text-decoration:none; font-size:.9rem; cursor:pointer; border:none; }
+.btn-primary { background:var(--accent); color:#071324; }
+.btn-secondary { border:1px solid var(--border); color:#fff; background:rgba(255,255,255,.04); }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:18px 0 32px; }
+.card { background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:20px; display:flex; flex-direction:column; justify-content:space-between; }
+.card h3 { margin:0 0 8px; font-size:1.05rem; }
+.card p { margin:0 0 14px; color:var(--muted); font-size:.9rem; }
+.pill { display:inline-block; font-size:.73rem; font-weight:700; padding:3px 9px; border-radius:999px; background:rgba(16,185,129,.15); color:#6ee7b7; margin-bottom:8px; }
+.pill-blue { background:rgba(56,189,248,.15); color:#7dd3fc; }
+article, .panel { background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:28px; margin-bottom:22px; }
+article h1 { margin-top:0; font-size:1.85rem; }
+article h2 { margin-top:26px; padding-top:16px; border-top:1px solid var(--border); font-size:1.28rem; }
+article a, .panel a { color:var(--accent); }
+pre { background:#070b17; border:1px solid var(--border); border-radius:10px; padding:16px; overflow-x:auto; font-size:.84rem; }
+code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; background:rgba(56,189,248,.12); padding:2px 5px; border-radius:5px; font-size:.88em; }
+pre code { background:none; padding:0; }
+.table-wrap { overflow-x:auto; margin:14px 0; }
+table { width:100%; border-collapse:collapse; font-size:.89rem; }
+th,td { border:1px solid var(--border); padding:10px 12px; text-align:left; }
+th { background:#0d1429; color:#fff; }
+tr.ours { background:rgba(16,185,129,.08); }
+blockquote { border-left:3px solid var(--accent); margin:16px 0; padding:8px 16px; background:rgba(56,189,248,.06); color:#d8e6ff; }
+input, select { background:#070b17; color:#fff; border:1px solid var(--border); border-radius:8px; padding:9px 12px; font-size:.95rem; }
+.calc-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin:16px 0; }
+.stat-box { background:#0a1126; border:1px solid var(--border); border-radius:12px; padding:16px; }
+.stat-num { font-size:1.75rem; font-weight:800; color:#6ee7b7; }
+footer { border-top:1px solid var(--border); color:var(--muted); font-size:.86rem; padding:24px 20px; text-align:center; }
+footer a { color:var(--accent); }
+</style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Apify Run Cost Calculator","url":"https://ketannsaint.github.io/apify-browserless-scrapers/calculator.html"}</script>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="https://ketannsaint.github.io/apify-browserless-scrapers/">Browserless Apify Scrapers (60)</a>
+      <div class="nav-links">
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/">Catalog</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/compare.html">Honest Comparisons</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/calculator.html">Cost Calculator</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/guides/google-maps-reddit-lead-engine.html">Guides</a>
+        <a href="https://apify.com/leopoldsaint" target="_blank" rel="noopener">Apify Store ↗</a>
+      </div>
+    </nav>
+  </header>
+  <main class="wrap">
+          <section class="hero">
+            <span class="pill pill-blue">INTERACTIVE PPE ESTIMATOR</span>
+            <h1>Apify Run Cost Calculator</h1>
+            <p>Select any of our 60 browserless Actors and enter how many rows you want to extract. Platform usage is included — zero hidden proxy or compute surcharges.</p>
+          </section>
+          <div class="panel">
+            <div class="calc-grid">
+              <div><label style="display:block;margin-bottom:6px;color:var(--muted)">Actor</label><select id="actorSel" style="width:100%"></select></div>
+              <div><label style="display:block;margin-bottom:6px;color:var(--muted)">Number of Results</label><input id="qtyIn" type="number" min="1" max="1000000" value="1000" style="width:100%"/></div>
+              <div><label style="display:block;margin-bottom:6px;color:var(--muted)">Apify Plan Tier</label><select id="tierSel" style="width:100%"><option value="free">Free ($5/mo free credit)</option><option value="gold">Business / Gold Discount</option></select></div>
+            </div>
+            <div class="calc-grid" style="margin-top:20px;">
+              <div class="stat-box"><div style="color:var(--muted);font-size:.85rem">Estimated Run Cost</div><div class="stat-num" id="costOut">$0.00</div></div>
+              <div class="stat-box"><div style="color:var(--muted);font-size:.85rem">Included in Free $5/mo Credit</div><div class="stat-num" id="freeRunsOut">0</div></div>
+              <div class="stat-box"><div style="color:var(--muted);font-size:.85rem">Start Fee</div><div class="stat-num" id="startOut">$0.00</div></div>
+            </div>
+            <div class="cta-row" style="margin-top:16px;"><a id="runBtn" class="btn btn-primary" href="https://apify.com/leopoldsaint" target="_blank" rel="noopener">Run Selected Actor on Apify ↗</a></div>
+          </div>
+          <script>
+            const ACTORS = [{"slug":"google-maps-leads-scraper","name":"Google Maps Scraper — Leads & Emails","free1k":1.5,"gold1k":0.9,"startFee":0,"url":"https://apify.com/leopoldsaint/google-maps-leads-scraper"},{"slug":"businesses-without-websites-leads","name":"Businesses Without Websites Leads","free1k":8,"gold1k":5,"startFee":0,"url":"https://apify.com/leopoldsaint/businesses-without-websites-leads"},{"slug":"website-contact-email-scraper","name":"Website Contact & Email Scraper","free1k":3,"gold1k":1.8,"startFee":0,"url":"https://apify.com/leopoldsaint/website-contact-email-scraper"},{"slug":"website-tech-stack-detector","name":"Website Tech Stack Detector","free1k":2.5,"gold1k":1.6,"startFee":0,"url":"https://apify.com/leopoldsaint/website-tech-stack-detector"},{"slug":"y-combinator-companies-scraper","name":"Y Combinator Companies Scraper","free1k":6,"gold1k":3.6,"startFee":0,"url":"https://apify.com/leopoldsaint/y-combinator-companies-scraper"},{"slug":"sec-edgar-form-d-funding-scraper","name":"SEC EDGAR Form D Funding Scraper","free1k":12,"gold1k":7.5,"startFee":0,"url":"https://apify.com/leopoldsaint/sec-edgar-form-d-funding-scraper"},{"slug":"career-site-jobs-scraper","name":"Career Site & ATS Jobs Scraper","free1k":4,"gold1k":2.5,"startFee":0,"url":"https://apify.com/leopoldsaint/career-site-jobs-scraper"},{"slug":"shopify-store-analyzer-leads","name":"Shopify Store Analyzer & Leads","free1k":6,"gold1k":4.2,"startFee":0,"url":"https://apify.com/leopoldsaint/shopify-store-analyzer-leads"},{"slug":"shopify-active-ads-lead-finder","name":"Shopify Stores Running Meta Ads","free1k":120,"gold1k":84,"startFee":0.00005,"url":"https://apify.com/leopoldsaint/shopify-active-ads-lead-finder"},{"slug":"youtube-transcript-scraper","name":"YouTube Transcript Scraper","free1k":3,"gold1k":1.8,"startFee":0,"url":"https://apify.com/leopoldsaint/youtube-transcript-scraper"},{"slug":"youtube-video-channel-scraper","name":"YouTube Video & Channel Scraper","free1k":2.5,"gold1k":1.6,"startFee":0,"url":"https://apify.com/leopoldsaint/youtube-video-channel-scraper"},{"slug":"youtube-comments-scraper","name":"YouTube Comments Scraper","free1k":2,"gold1k":1.25,"startFee":0,"url":"https://apify.com/leopoldsaint/youtube-comments-scraper"},{"slug":"youtube-channel-email-scraper","name":"YouTube Channel Email Scraper","free1k":15,"gold1k":9,"startFee":0,"url":"https://apify.com/leopoldsaint/youtube-channel-email-scraper"},{"slug":"reddit-scraper-fast","name":"Reddit Scraper — Posts & Comments","free1k":1.5,"gold1k":0.9,"startFee":0,"url":"https://apify.com/leopoldsaint/reddit-scraper-fast"},{"slug":"pinterest-scraper-fast","name":"Pinterest Scraper — Pins & Boards","free1k":2,"gold1k":1.25,"startFee":0,"url":"https://apify.com/leopoldsaint/pinterest-scraper-fast"},{"slug":"telegram-channel-scraper-fast","name":"Telegram Channel Scraper","free1k":1.5,"gold1k":0.9,"startFee":0,"url":"https://apify.com/leopoldsaint/telegram-channel-scraper-fast"},{"slug":"google-ads-transparency-scraper","name":"Google Ads Transparency Scraper","free1k":2.5,"gold1k":1.6,"startFee":0,"url":"https://apify.com/leopoldsaint/google-ads-transparency-scraper"},{"slug":"google-autocomplete-keyword-scraper","name":"Google & 5-Engine Autocomplete","free1k":1,"gold1k":0.55,"startFee":0,"url":"https://apify.com/leopoldsaint/google-autocomplete-keyword-scraper"},{"slug":"google-trends-scraper-fast","name":"Google Trends Scraper","free1k":3.5,"gold1k":2,"startFee":0,"url":"https://apify.com/leopoldsaint/google-trends-scraper-fast"},{"slug":"google-news-scraper-fast","name":"Google News Scraper","free1k":2.5,"gold1k":1.6,"startFee":0,"url":"https://apify.com/leopoldsaint/google-news-scraper-fast"},{"slug":"app-store-google-play-scraper","name":"App Store & Google Play Scraper","free1k":2,"gold1k":1.25,"startFee":0,"url":"https://apify.com/leopoldsaint/app-store-google-play-scraper"},{"slug":"google-flights-scraper-fast","name":"Google Flights Scraper","free1k":1,"gold1k":0.7,"startFee":0,"url":"https://apify.com/leopoldsaint/google-flights-scraper-fast"},{"slug":"pinterest-trends-scraper","name":"Pinterest Trends Scraper","free1k":2.5,"gold1k":1.7,"startFee":0,"url":"https://apify.com/leopoldsaint/pinterest-trends-scraper"},{"slug":"pinterest-etsy-trend-gap-finder","name":"Etsy Trend Gap Finder","free1k":30,"gold1k":21,"startFee":0.00005,"url":"https://apify.com/leopoldsaint/pinterest-etsy-trend-gap-finder"},{"slug":"tiktok-amazon-product-gap-finder","name":"TikTok Shop to Amazon Gap Finder","free1k":50,"gold1k":35,"startFee":0.00005,"url":"https://apify.com/leopoldsaint/tiktok-amazon-product-gap-finder"},{"slug":"threads-scraper","name":"Threads Scraper — Posts, Profiles & Search","free1k":1.8,"gold1k":1.05,"startFee":0,"url":"https://apify.com/leopoldsaint/threads-scraper"},{"slug":"snapchat-scraper","name":"Snapchat Scraper — Profiles & Spotlights","free1k":2,"gold1k":1.25,"startFee":0,"url":"https://apify.com/leopoldsaint/snapchat-scraper"},{"slug":"bulk-email-verifier","name":"Bulk Email Verifier — MX, SPF & DMARC","free1k":0.9,"gold1k":0.6,"startFee":0,"url":"https://apify.com/leopoldsaint/bulk-email-verifier"},{"slug":"audio-video-podcast-transcriber","name":"Audio, Video & Podcast Transcriber (Whisper AI)","free1k":6,"gold1k":3.6,"startFee":0,"url":"https://apify.com/leopoldsaint/audio-video-podcast-transcriber"},{"slug":"video-frame-extractor","name":"Video Frame Extractor — Scenes & Keyframes","free1k":2,"gold1k":1.25,"startFee":0,"url":"https://apify.com/leopoldsaint/video-frame-extractor"},{"slug":"linkedin-jobs-scraper","name":"LinkedIn Jobs Scraper — No Cookies","free1k":1,"gold1k":0.6,"startFee":0,"url":"https://apify.com/leopoldsaint/linkedin-jobs-scraper"},{"slug":"amazon-search-scraper","name":"Amazon Product Search Scraper","free1k":1.5,"gold1k":0.9,"startFee":0,"url":"https://apify.com/leopoldsaint/amazon-search-scraper"},{"slug":"amazon-bestsellers-scraper","name":"Amazon Best Sellers & Movers Scraper","free1k":2,"gold1k":1.2,"startFee":0,"url":"https://apify.com/leopoldsaint/amazon-bestsellers-scraper"},{"slug":"google-hotels-scraper","name":"Google Hotels Scraper — Prices & Deals","free1k":3.5,"gold1k":2.1,"startFee":0,"url":"https://apify.com/leopoldsaint/google-hotels-scraper"},{"slug":"pdf-text-table-extractor","name":"PDF Text & Table Extractor — AI & RAG","free1k":4,"gold1k":2.4,"startFee":0,"url":"https://apify.com/leopoldsaint/pdf-text-table-extractor"},{"slug":"instagram-reels-transcript-scraper","name":"Instagram Reels Transcript Scraper (Whisper AI)","free1k":8,"gold1k":5,"startFee":0,"url":"https://apify.com/leopoldsaint/instagram-reels-transcript-scraper"},{"slug":"video-hook-script-breakdown","name":"Video Hook & Script Breakdown AI","free1k":20,"gold1k":11,"startFee":0,"url":"https://apify.com/leopoldsaint/video-hook-script-breakdown"},{"slug":"instagram-video-downloader","name":"Instagram Video & Reels Downloader","free1k":2.5,"gold1k":1.6,"startFee":0,"url":"https://apify.com/leopoldsaint/instagram-video-downloader"},{"slug":"instagram-email-contact-scraper","name":"Instagram Email & Contact Scraper","free1k":8,"gold1k":5,"startFee":0,"url":"https://apify.com/leopoldsaint/instagram-email-contact-scraper"},{"slug":"amazon-product-details-scraper","name":"Amazon Product Details Scraper (10 Markets)","free1k":2,"gold1k":1.25,"startFee":0,"url":"https://apify.com/leopoldsaint/amazon-product-details-scraper"},{"slug":"website-screenshot-pdf-api","name":"Website Screenshot, PDF & OG Card API","free1k":3,"gold1k":1.8,"startFee":0,"url":"https://apify.com/leopoldsaint/website-screenshot-pdf-api"},{"slug":"pagespeed-cwv-seo-auditor","name":"PageSpeed Core Web Vitals & SEO Auditor","free1k":3.5,"gold1k":2,"startFee":0,"url":"https://apify.com/leopoldsaint/pagespeed-cwv-seo-auditor"},{"slug":"bulk-image-downloader","name":"Bulk Image Downloader & WebP Optimizer","free1k":8,"gold1k":5,"startFee":0,"url":"https://apify.com/leopoldsaint/bulk-image-downloader"},{"slug":"instagram-profile-posts-reels-scraper","name":"Instagram Profile, Posts & Reels Scraper","free1k":1.5,"gold1k":0.9,"startFee":0,"url":"https://apify.com/leopoldsaint/instagram-profile-posts-reels-scraper"},{"slug":"bbb-business-leads-scraper","name":"BBB Business Directory & Leads Scraper","free1k":8,"gold1k":5,"startFee":0,"url":"https://apify.com/leopoldsaint/bbb-business-leads-scraper"},{"slug":"shopify-store-products-scraper","name":"Shopify Store Products & Catalog Scraper","free1k":1,"gold1k":0.55,"startFee":0,"url":"https://apify.com/leopoldsaint/shopify-store-products-scraper"},{"slug":"yahoo-finance-scraper","name":"Yahoo Finance Stock, Crypto & Financials Scraper","free1k":1.5,"gold1k":0.9,"startFee":0,"url":"https://apify.com/leopoldsaint/yahoo-finance-scraper"},{"slug":"remote-jobs-scraper","name":"Remote Jobs Aggregator & Salary Scraper","free1k":1.5,"gold1k":0.9,"startFee":0,"url":"https://apify.com/leopoldsaint/remote-jobs-scraper"},{"slug":"apple-maps-leads-scraper","name":"Apple Maps Business Leads & Emails Scraper","free1k":2.5,"gold1k":1.45,"startFee":0,"url":"https://apify.com/leopoldsaint/apple-maps-leads-scraper"},{"slug":"chrome-web-store-scraper","name":"Chrome Web Store Extensions & Developer Leads","free1k":2,"gold1k":1.2,"startFee":0,"url":"https://apify.com/leopoldsaint/chrome-web-store-scraper"},{"slug":"website-to-markdown-crawler","name":"Website to Markdown & LLM RAG Crawler","free1k":1.5,"gold1k":0.9,"startFee":0,"url":"https://apify.com/leopoldsaint/website-to-markdown-crawler"},{"slug":"youtube-shorts-scraper","name":"YouTube Shorts Scraper — Viral Metrics & Channels","free1k":1.5,"gold1k":0.9,"startFee":0,"url":"https://apify.com/leopoldsaint/youtube-shorts-scraper"},{"slug":"apple-app-store-scraper","name":"Apple App Store & iOS Reviews Scraper","free1k":1,"gold1k":0.55,"startFee":0,"url":"https://apify.com/leopoldsaint/apple-app-store-scraper"},{"slug":"redfin-real-estate-scraper","name":"Redfin Real Estate & Property Listings Scraper","free1k":2,"gold1k":1.2,"startFee":0,"url":"https://apify.com/leopoldsaint/redfin-real-estate-scraper"},{"slug":"shopify-app-store-scraper","name":"Shopify App Store Scraper — Apps, Pricing & Developers","free1k":2,"gold1k":1.2,"startFee":0,"url":"https://apify.com/leopoldsaint/shopify-app-store-scraper"},{"slug":"google-play-store-scraper","name":"Google Play Store Apps & Reviews Scraper","free1k":1,"gold1k":0.55,"startFee":0,"url":"https://apify.com/leopoldsaint/google-play-store-scraper"},{"slug":"craigslist-scraper","name":"Craigslist Listings, Prices & Deals Scraper","free1k":1.5,"gold1k":0.9,"startFee":0,"url":"https://apify.com/leopoldsaint/craigslist-scraper"},{"slug":"twitch-scraper","name":"Twitch Live Streams, Channels, Games & VODs Scraper","free1k":1.5,"gold1k":0.9,"startFee":0,"url":"https://apify.com/leopoldsaint/twitch-scraper"},{"slug":"rss-feed-monitor","name":"RSS, Atom & News Feed Scraper & Monitor","free1k":1.5,"gold1k":0.9,"startFee":0,"url":"https://apify.com/leopoldsaint/rss-feed-monitor"},{"slug":"domain-whois-dns-ssl-checker","name":"Bulk Domain WHOIS, RDAP, DNS, SSL & Email Auth Checker","free1k":2,"gold1k":1.2,"startFee":0,"url":"https://apify.com/leopoldsaint/domain-whois-dns-ssl-checker"}];
+            const sel = document.getElementById('actorSel');
+            ACTORS.forEach((a, i) => { const o = document.createElement('option'); o.value = i; o.textContent = a.name + ' ($' + a.free1k.toFixed(2) + '/1K)'; sel.appendChild(o); });
+            function recalc() {
+              const a = ACTORS[Number(sel.value) || 0];
+              const qty = Math.max(1, Number(document.getElementById('qtyIn').value) || 1000);
+              const rate1k = document.getElementById('tierSel').value === 'gold' ? a.gold1k : a.free1k;
+              const cost = (qty / 1000) * rate1k + a.startFee;
+              const maxFreeRows = Math.floor((5 / rate1k) * 1000);
+              document.getElementById('costOut').textContent = '$' + cost.toFixed(cost < 0.1 ? 4 : 2);
+              document.getElementById('freeRunsOut').textContent = maxFreeRows.toLocaleString() + ' rows';
+              document.getElementById('startOut').textContent = a.startFee === 0 ? '$0.00' : '$' + a.startFee;
+              document.getElementById('runBtn').href = a.url;
+            }
+            sel.onchange = recalc; document.getElementById('qtyIn').oninput = recalc; document.getElementById('tierSel').onchange = recalc; recalc();
+          </script></main>
+  <footer>
+    Built by <a href="https://apify.com/leopoldsaint" target="_blank" rel="noopener">Leopold Saint on Apify Store</a> ·
+    <a href="https://github.com/ketannsaint/apify-browserless-scrapers" target="_blank" rel="noopener">GitHub &amp; 22 n8n JSON Templates</a> ·
+    MCP: <code>https://mcp.apify.com</code> · Updated 2026-11-28
+  </footer>
+</body>
+</html>

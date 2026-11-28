@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Direct ATS Hiring Signals + Live Ad Spend + Website Contact Enrichment Without Headless Browsers | Browserless Apify Scrapers</title>
+  <meta name="description" content="How B2B agencies and outbound teams combine Greenhouse/Lever/Ashby job openings, Google &amp; Meta ad proof, and flat-rate domain contact enrichment in a single automated pipeline."/>
+  <link rel="canonical" href="https://ketannsaint.github.io/apify-browserless-scrapers/guides/b2b-lead-enrichment-pipeline.html"/>
+  <meta property="og:title" content="Direct ATS Hiring Signals + Live Ad Spend + Website Contact Enrichment Without Headless Browsers | Browserless Apify Scrapers"/>
+  <meta property="og:description" content="How B2B agencies and outbound teams combine Greenhouse/Lever/Ashby job openings, Google &amp; Meta ad proof, and flat-rate domain contact enrichment in a single automated pipeline."/>
+  <meta property="og:url" content="https://ketannsaint.github.io/apify-browserless-scrapers/guides/b2b-lead-enrichment-pipeline.html"/>
+  <meta property="og:type" content="website"/>
+  <style>
+:root { --bg:#0b1020; --panel:#121933; --border:#243056; --text:#e8eefc; --muted:#9fb0d9; --accent:#38bdf8; --green:#10b981; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+header { border-bottom:1px solid var(--border); background:#0f162d; position:sticky; top:0; z-index:10; }
+.nav { max-width:1100px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.brand { font-weight:700; color:#fff; text-decoration:none; font-size:1.05rem; }
+.nav-links { display:flex; gap:16px; flex-wrap:wrap; font-size:.9rem; }
+.nav-links a { color:var(--muted); text-decoration:none; }
+.nav-links a:hover { color:var(--accent); }
+.wrap { max-width:1100px; margin:0 auto; padding:32px 20px 64px; }
+.hero { background:linear-gradient(135deg,#132145,#0e1b35); border:1px solid var(--border); border-radius:16px; padding:32px; margin-bottom:28px; }
+.hero h1 { margin:0 0 10px; font-size:2rem; line-height:1.2; }
+.hero p { color:var(--muted); margin:0 0 20px; font-size:1.02rem; }
+.cta-row { display:flex; gap:12px; flex-wrap:wrap; }
+.btn { display:inline-block; padding:10px 16px; border-radius:10px; font-weight:600; text-decoration:none; font-size:.9rem; cursor:pointer; border:none; }
+.btn-primary { background:var(--accent); color:#071324; }
+.btn-secondary { border:1px solid var(--border); color:#fff; background:rgba(255,255,255,.04); }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:18px 0 32px; }
+.card { background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:20px; display:flex; flex-direction:column; justify-content:space-between; }
+.card h3 { margin:0 0 8px; font-size:1.05rem; }
+.card p { margin:0 0 14px; color:var(--muted); font-size:.9rem; }
+.pill { display:inline-block; font-size:.73rem; font-weight:700; padding:3px 9px; border-radius:999px; background:rgba(16,185,129,.15); color:#6ee7b7; margin-bottom:8px; }
+.pill-blue { background:rgba(56,189,248,.15); color:#7dd3fc; }
+article, .panel { background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:28px; margin-bottom:22px; }
+article h1 { margin-top:0; font-size:1.85rem; }
+article h2 { margin-top:26px; padding-top:16px; border-top:1px solid var(--border); font-size:1.28rem; }
+article a, .panel a { color:var(--accent); }
+pre { background:#070b17; border:1px solid var(--border); border-radius:10px; padding:16px; overflow-x:auto; font-size:.84rem; }
+code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; background:rgba(56,189,248,.12); padding:2px 5px; border-radius:5px; font-size:.88em; }
+pre code { background:none; padding:0; }
+.table-wrap { overflow-x:auto; margin:14px 0; }
+table { width:100%; border-collapse:collapse; font-size:.89rem; }
+th,td { border:1px solid var(--border); padding:10px 12px; text-align:left; }
+th { background:#0d1429; color:#fff; }
+tr.ours { background:rgba(16,185,129,.08); }
+blockquote { border-left:3px solid var(--accent); margin:16px 0; padding:8px 16px; background:rgba(56,189,248,.06); color:#d8e6ff; }
+input, select { background:#070b17; color:#fff; border:1px solid var(--border); border-radius:8px; padding:9px 12px; font-size:.95rem; }
+.calc-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin:16px 0; }
+.stat-box { background:#0a1126; border:1px solid var(--border); border-radius:12px; padding:16px; }
+.stat-num { font-size:1.75rem; font-weight:800; color:#6ee7b7; }
+footer { border-top:1px solid var(--border); color:var(--muted); font-size:.86rem; padding:24px 20px; text-align:center; }
+footer a { color:var(--accent); }
+</style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Direct ATS Hiring Signals + Live Ad Spend + Website Contact Enrichment Without Headless Browsers","description":"How B2B agencies and outbound teams combine Greenhouse/Lever/Ashby job openings, Google & Meta ad proof, and flat-rate domain contact enrichment in a single automated pipeline.","datePublished":"2026-11-28","author":{"@type":"Person","name":"Leopold Saint","url":"https://apify.com/leopoldsaint"}}</script>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="https://ketannsaint.github.io/apify-browserless-scrapers/">Browserless Apify Scrapers (60)</a>
+      <div class="nav-links">
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/">Catalog</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/compare.html">Honest Comparisons</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/calculator.html">Cost Calculator</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/guides/google-maps-reddit-lead-engine.html">Guides</a>
+        <a href="https://apify.com/leopoldsaint" target="_blank" rel="noopener">Apify Store ↗</a>
+      </div>
+    </nav>
+  </header>
+  <main class="wrap"><article><span class="pill">B2B OUTBOUND · ATS + ADS</span><h1>Direct ATS Hiring Signals + Live Ad Spend + Website Contact Enrichment Without Headless Browsers</h1><p>Static B2B lead databases tell you what a company looked like six months ago. They don't tell you whether that company is <strong>actively hiring right now</strong>, <strong>actively spending on Google or Meta ads this week</strong>, or <strong>missing a specific tool in their live website stack</strong>.</p>
+<p>Over the past few months I built a modular suite of fast, zero-browser Apify Actors designed specifically for <strong>signal-based B2B outbound</strong> — where you pay only for matching records delivered, not per crawled page or idle browser minute.</p>
+<h2>The Signal-Based Outbound Stack</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Signal</th>
+<th>Actor</th>
+<th>What it extracts</th>
+<th>Price (Free / Gold+)</th>
+</tr></thead><tbody>
+<tr>
+<td>Live hiring intent</td>
+<td><a href="https://apify.com/leopoldsaint/career-site-jobs-scraper" target="_blank" rel="noopener">Career Site &amp; Remote Tech Jobs Scraper</a></td>
+<td>Direct Greenhouse, Lever, Ashby + 4 remote tech boards with normalized USD salaries, remote flags &amp; direct apply URLs</td>
+<td>$4.00 / $2.50 per 1K</td>
+</tr>
+<tr>
+<td>Active Google Ads</td>
+<td><a href="https://apify.com/leopoldsaint/google-ads-transparency-scraper" target="_blank" rel="noopener">Google Ads Transparency Center Scraper</a></td>
+<td>Search, Display &amp; YouTube ad creatives by domain, brand, or <code>AR...</code> ID with <code>daysActive</code> &amp; preview URLs</td>
+<td>$2.50 / $1.60 per 1K</td>
+</tr>
+<tr>
+<td>Active Meta Ads (Shopify)</td>
+<td><a href="https://apify.com/leopoldsaint/shopify-active-ads-lead-finder" target="_blank" rel="noopener">Shopify Active Meta Ads Lead Finder</a></td>
+<td>Verified Shopify stores running live Meta ads + native 45-app stack gap detection &amp; no-duplicate memory</td>
+<td>$0.12 / $0.084 per lead</td>
+</tr>
+<tr>
+<td>Bulk Shopify enrichment</td>
+<td><a href="https://apify.com/leopoldsaint/shopify-store-analyzer-leads" target="_blank" rel="noopener">Shopify Store Analyzer &amp; Leads</a></td>
+<td>55+ apps, 6 ad pixels, theme, Shopify Plus signals, median catalog price &amp; <code>emailDomainMatch</code></td>
+<td>$6.00 / $4.20 per 1K</td>
+</tr>
+<tr>
+<td>Any B2B website enrichment</td>
+<td><a href="https://apify.com/leopoldsaint/website-contact-email-scraper" target="_blank" rel="noopener">Website Contact Details, Emails, Phones &amp; Social Scraper</a></td>
+<td>Homepage + <code>/contact</code> <code>/about</code> <code>/team</code> crawl, domain-ranked emails, phones, 10 socials, JSON-LD address &amp; 30+ tech signals at flat per-domain pricing</td>
+<td>$3.00 / $1.80 per 1K</td>
+</tr>
+</tbody></table></div>
+<hr/>
+<h2>Recipe 1: Detect Target SaaS Companies Hiring + Enrich Their Domains (TypeScript)</h2>
+<pre><code class="lang-typescript">import { ApifyClient } from 'apify-client';
+
+const client = new ApifyClient({ token: process.env.APIFY_TOKEN });
+
+// 1. Pull live ATS openings directly from Greenhouse, Ashby, Lever &amp; remote boards
+const jobsRun = await client.actor('leopoldsaint/career-site-jobs-scraper').call({
+    searchQueries: ['growth', 'marketing', 'engineer'],
+    companyBoards: ['greenhouse:stripe', 'ashby:openai', 'lever:spotify'],
+    includeRemoteBoards: true,
+    minSalaryUsd: 120000,
+    maxJobs: 50,
+});
+const { items: jobs } = await client.dataset(jobsRun.defaultDatasetId).listItems();
+
+// 2. Check which target domains are actively spending on Google Ads
+const adsRun = await client.actor('leopoldsaint/google-ads-transparency-scraper').call({
+    domains: ['hubspot.com', 'shopify.com'],
+    region: 'US',
+    maxAdsPerTarget: 10,
+    maxTotalAds: 20,
+});
+const { items: ads } = await client.dataset(adsRun.defaultDatasetId).listItems();
+
+// 3. Enrich any prospect domain list at a flat per-website rate (never billed per page!)
+const contactRun = await client.actor('leopoldsaint/website-contact-email-scraper').call({
+    websites: ['https://apify.com', 'https://basecamp.com', 'https://linear.app'],
+    maxPagesPerDomain: 4,
+    onlyWithEmail: true,
+    includeTechStack: true,
+});
+const { items: contacts } = await client.dataset(contactRun.defaultDatasetId).listItems();
+
+console.log({ jobs: jobs.length, activeAds: ads.length, enrichedContacts: contacts.length });</code></pre>
+<hr/>
+<h2>Recipe 2: Clay / n8n / Make Flat-Rate Website Enrichment (1 HTTP Call)</h2>
+<p>If you enrich lists coming out of Google Maps, directories, or LinkedIn company exports, per-page contact scrapers can burn your budget when a website has 40 nested pages.</p>
+<p>Instead, hit the synchronous flat-per-domain endpoint directly from <strong>Clay</strong>, <strong>n8n</strong>, or <strong>Make</strong>:</p>
+<pre><code class="lang-text">POST https://api.apify.com/v2/acts/leopoldsaint~website-contact-email-scraper/run-sync-get-dataset-items?token=YOUR_APIFY_TOKEN
+Content-Type: application/json</code></pre>
+<p>Payload:</p>
+<pre><code class="lang-json">{
+    &quot;websites&quot;: [&quot;https://apify.com&quot;, &quot;https://basecamp.com&quot;, &quot;https://linear.app&quot;],
+    &quot;maxPagesPerDomain&quot;: 4,
+    &quot;onlyWithEmail&quot;: true,
+    &quot;includeTechStack&quot;: true
+}</code></pre>
+<p>What you get back for each domain:</p>
+<ul>
+<li><code>bestEmail</code> (ranked to prefer domain-matching non-<code>noreply</code> addresses) + <code>emailDomainMatch: true/false</code></li>
+<li>Split <code>personalEmails</code> vs <code>roleEmails</code></li>
+<li><code>phones</code>, 10 clean social profile URLs (<code>linkedin</code>, <code>twitter</code>, <code>instagram</code>, <code>facebook</code>, <code>tiktok</code>, <code>youtube</code>, <code>github</code>, etc.), Schema.org <code>address</code>, and <code>techStack</code></li>
+<li>Non-2xx error pages (404/500) and domains without an email (when <code>onlyWithEmail: true</code>) are <strong>skipped and never billed</strong>.</li>
+</ul>
+<hr/>
+<h2>Recipe 3: Shopify Agency Weekly Lead Feed (Zero Duplicate Charges)</h2>
+<p>For Shopify email/SMS, CRO, retention, or paid-social agencies:</p>
+<pre><code class="lang-python">import os
+from apify_client import ApifyClient
+
+client = ApifyClient(os.environ[&quot;APIFY_TOKEN&quot;])
+
+run = client.actor(&quot;leopoldsaint/shopify-active-ads-lead-finder&quot;).call(run_input={
+    &quot;niche&quot;: &quot;pet supplements&quot;,
+    &quot;country&quot;: &quot;US&quot;,
+    &quot;serviceFocus&quot;: &quot;email_sms&quot;,
+    &quot;requireEmail&quot;: True,
+    &quot;rememberDeliveredLeads&quot;: True,
+    &quot;maxLeads&quot;: 10,
+})
+
+for lead in client.dataset(run[&quot;defaultDatasetId&quot;]).iterate_items():
+    print(lead[&quot;domain&quot;], lead[&quot;email&quot;], lead[&quot;fitScore&quot;], lead[&quot;missingStack&quot;])</code></pre>
+<p>Because <code>rememberDeliveredLeads: true</code> persists previously delivered domains across runs, you can schedule this weekly and only pay for brand-new verified Shopify advertisers entering your niche.</p>
+<hr/>
+<h2>Connect to AI Sales Agents via MCP</h2>
+<p>All five Actors work directly through Apify's hosted MCP server (<code>https://mcp.apify.com</code>), so Claude, Cursor, or custom outbound agents can qualify prospect domains, verify active ad spend, and pull live hiring signals in one conversation.</p></article></main>
+  <footer>
+    Built by <a href="https://apify.com/leopoldsaint" target="_blank" rel="noopener">Leopold Saint on Apify Store</a> ·
+    <a href="https://github.com/ketannsaint/apify-browserless-scrapers" target="_blank" rel="noopener">GitHub &amp; 22 n8n JSON Templates</a> ·
+    MCP: <code>https://mcp.apify.com</code> · Updated 2026-11-28
+  </footer>
+</body>
+</html>

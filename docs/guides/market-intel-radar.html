@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Build a Cross-Channel Demand &amp; Competitor Radar: Google Trends, Pinterest Trends, Google News &amp; App Store Reviews | Browserless Apify Scrapers</title>
+  <meta name="description" content="Combine 4 fast HTTP Apify Actors to monitor rising search momentum, seasonal Pinterest peaks, decoded breaking news URLs, and 1-2 star iOS/Android competitor complaints."/>
+  <link rel="canonical" href="https://ketannsaint.github.io/apify-browserless-scrapers/guides/market-intel-radar.html"/>
+  <meta property="og:title" content="Build a Cross-Channel Demand &amp; Competitor Radar: Google Trends, Pinterest Trends, Google News &amp; App Store Reviews | Browserless Apify Scrapers"/>
+  <meta property="og:description" content="Combine 4 fast HTTP Apify Actors to monitor rising search momentum, seasonal Pinterest peaks, decoded breaking news URLs, and 1-2 star iOS/Android competitor complaints."/>
+  <meta property="og:url" content="https://ketannsaint.github.io/apify-browserless-scrapers/guides/market-intel-radar.html"/>
+  <meta property="og:type" content="website"/>
+  <style>
+:root { --bg:#0b1020; --panel:#121933; --border:#243056; --text:#e8eefc; --muted:#9fb0d9; --accent:#38bdf8; --green:#10b981; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+header { border-bottom:1px solid var(--border); background:#0f162d; position:sticky; top:0; z-index:10; }
+.nav { max-width:1100px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.brand { font-weight:700; color:#fff; text-decoration:none; font-size:1.05rem; }
+.nav-links { display:flex; gap:16px; flex-wrap:wrap; font-size:.9rem; }
+.nav-links a { color:var(--muted); text-decoration:none; }
+.nav-links a:hover { color:var(--accent); }
+.wrap { max-width:1100px; margin:0 auto; padding:32px 20px 64px; }
+.hero { background:linear-gradient(135deg,#132145,#0e1b35); border:1px solid var(--border); border-radius:16px; padding:32px; margin-bottom:28px; }
+.hero h1 { margin:0 0 10px; font-size:2rem; line-height:1.2; }
+.hero p { color:var(--muted); margin:0 0 20px; font-size:1.02rem; }
+.cta-row { display:flex; gap:12px; flex-wrap:wrap; }
+.btn { display:inline-block; padding:10px 16px; border-radius:10px; font-weight:600; text-decoration:none; font-size:.9rem; cursor:pointer; border:none; }
+.btn-primary { background:var(--accent); color:#071324; }
+.btn-secondary { border:1px solid var(--border); color:#fff; background:rgba(255,255,255,.04); }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:18px 0 32px; }
+.card { background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:20px; display:flex; flex-direction:column; justify-content:space-between; }
+.card h3 { margin:0 0 8px; font-size:1.05rem; }
+.card p { margin:0 0 14px; color:var(--muted); font-size:.9rem; }
+.pill { display:inline-block; font-size:.73rem; font-weight:700; padding:3px 9px; border-radius:999px; background:rgba(16,185,129,.15); color:#6ee7b7; margin-bottom:8px; }
+.pill-blue { background:rgba(56,189,248,.15); color:#7dd3fc; }
+article, .panel { background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:28px; margin-bottom:22px; }
+article h1 { margin-top:0; font-size:1.85rem; }
+article h2 { margin-top:26px; padding-top:16px; border-top:1px solid var(--border); font-size:1.28rem; }
+article a, .panel a { color:var(--accent); }
+pre { background:#070b17; border:1px solid var(--border); border-radius:10px; padding:16px; overflow-x:auto; font-size:.84rem; }
+code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; background:rgba(56,189,248,.12); padding:2px 5px; border-radius:5px; font-size:.88em; }
+pre code { background:none; padding:0; }
+.table-wrap { overflow-x:auto; margin:14px 0; }
+table { width:100%; border-collapse:collapse; font-size:.89rem; }
+th,td { border:1px solid var(--border); padding:10px 12px; text-align:left; }
+th { background:#0d1429; color:#fff; }
+tr.ours { background:rgba(16,185,129,.08); }
+blockquote { border-left:3px solid var(--accent); margin:16px 0; padding:8px 16px; background:rgba(56,189,248,.06); color:#d8e6ff; }
+input, select { background:#070b17; color:#fff; border:1px solid var(--border); border-radius:8px; padding:9px 12px; font-size:.95rem; }
+.calc-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin:16px 0; }
+.stat-box { background:#0a1126; border:1px solid var(--border); border-radius:12px; padding:16px; }
+.stat-num { font-size:1.75rem; font-weight:800; color:#6ee7b7; }
+footer { border-top:1px solid var(--border); color:var(--muted); font-size:.86rem; padding:24px 20px; text-align:center; }
+footer a { color:var(--accent); }
+</style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Build a Cross-Channel Demand & Competitor Radar: Google Trends, Pinterest Trends, Google News & App Store Reviews","description":"Combine 4 fast HTTP Apify Actors to monitor rising search momentum, seasonal Pinterest peaks, decoded breaking news URLs, and 1-2 star iOS/Android competitor complaints.","datePublished":"2026-11-28","author":{"@type":"Person","name":"Leopold Saint","url":"https://apify.com/leopoldsaint"}}</script>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="https://ketannsaint.github.io/apify-browserless-scrapers/">Browserless Apify Scrapers (60)</a>
+      <div class="nav-links">
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/">Catalog</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/compare.html">Honest Comparisons</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/calculator.html">Cost Calculator</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/guides/google-maps-reddit-lead-engine.html">Guides</a>
+        <a href="https://apify.com/leopoldsaint" target="_blank" rel="noopener">Apify Store ↗</a>
+      </div>
+    </nav>
+  </header>
+  <main class="wrap"><article><span class="pill">TRENDS · NEWS · APP REVIEWS</span><h1>Build a Cross-Channel Demand &amp; Competitor Radar: Google Trends, Pinterest Trends, Google News &amp; App Store Reviews</h1><p>Whether you launch e-commerce products, mobile apps, or SaaS tools, spotting demand <em>early</em> and finding real user complaints beats guessing every time.</p>
+<p>Here is a lightweight, browserless 4-source market-intelligence stack you can schedule weekly for pennies:</p>
+<div class="table-wrap"><table><thead><tr>
+<th>Source</th>
+<th>Actor</th>
+<th>Key Edge</th>
+<th>Price (Free / Gold+)</th>
+</tr></thead><tbody>
+<tr>
+<td>Search demand</td>
+<td><a href="https://apify.com/leopoldsaint/google-trends-scraper-fast" target="_blank" rel="noopener">Google Trends Scraper Fast</a></td>
+<td>Timeline + geo + rising/breakout queries + daily trending RSS + computed <code>momentumPct</code> &amp; <code>trendDirection</code></td>
+<td>$3.50 / $2.00 per 1K</td>
+</tr>
+<tr>
+<td>Visual / seasonal demand</td>
+<td><a href="https://apify.com/leopoldsaint/pinterest-trends-scraper" target="_blank" rel="noopener">Pinterest Trends &amp; Keyword Research Scraper</a></td>
+<td>53-week curves across 11 countries + automatic <code>projectedPeakDate</code> &amp; 8-week lead <code>seasonalListByDate</code></td>
+<td>$2.50 / $1.70 per 1K</td>
+</tr>
+<tr>
+<td>Breaking news</td>
+<td><a href="https://apify.com/leopoldsaint/google-news-scraper-fast" target="_blank" rel="noopener">Google News Fast Scraper &amp; Real URL Decoder</a></td>
+<td>Automatically decodes <code>news.google.com/rss/articles/...</code> into real canonical publisher URLs (included free)</td>
+<td>$2.50 / $1.60 per 1K</td>
+</tr>
+<tr>
+<td>Mobile product gaps</td>
+<td><a href="https://apify.com/leopoldsaint/app-store-google-play-scraper" target="_blank" rel="noopener">App Store &amp; Google Play Scraper</a></td>
+<td>Unified iOS + Android schema, store-reported Android installs, developer emails, and star-filtered reviews</td>
+<td>$2.00 / $1.25 per 1K</td>
+</tr>
+</tbody></table></div>
+<hr/>
+<h2>Example: Weekly Demand + Competitor Complaint Digest (Python)</h2>
+<pre><code class="lang-python">import os
+from apify_client import ApifyClient
+
+client = ApifyClient(os.environ[&quot;APIFY_TOKEN&quot;])
+
+# 1. Track keyword momentum + daily breaking topics on Google Trends
+trends_run = client.actor(&quot;leopoldsaint/google-trends-scraper-fast&quot;).call(run_input={
+    &quot;mode&quot;: &quot;both&quot;,
+    &quot;keywords&quot;: [&quot;ai agents&quot;, &quot;shopify&quot;, &quot;matcha latte&quot;],
+    &quot;geo&quot;: &quot;US&quot;,
+    &quot;timeRange&quot;: &quot;today 12-m&quot;,
+    &quot;includeGeoBreakdown&quot;: True,
+    &quot;includeRelatedQueries&quot;: True,
+    &quot;maxTrendingItems&quot;: 10,
+})
+trends = client.dataset(trends_run[&quot;defaultDatasetId&quot;]).list_items().items
+
+# 2. Decode Google News headlines into real publisher URLs (no news.google.com redirects!)
+news_run = client.actor(&quot;leopoldsaint/google-news-scraper-fast&quot;).call(run_input={
+    &quot;queries&quot;: [&quot;AI agents funding&quot;],
+    &quot;country&quot;: &quot;US&quot;,
+    &quot;timeRange&quot;: &quot;24h&quot;,
+    &quot;decodeUrls&quot;: True,
+    &quot;maxTotalArticles&quot;: 20,
+})
+news = client.dataset(news_run[&quot;defaultDatasetId&quot;]).list_items().items
+
+# 3. Mine 1-2 star reviews across BOTH Apple App Store &amp; Google Play in one schema
+reviews_run = client.actor(&quot;leopoldsaint/app-store-google-play-scraper&quot;).call(run_input={
+    &quot;platform&quot;: &quot;both&quot;,
+    &quot;mode&quot;: &quot;apps_and_reviews&quot;,
+    &quot;iosAppIds&quot;: [&quot;570060128&quot;],
+    &quot;androidAppIds&quot;: [&quot;com.duolingo&quot;],
+    &quot;minReviewRating&quot;: 1,
+    &quot;maxReviewRating&quot;: 2,
+    &quot;maxReviewsPerApp&quot;: 25,
+    &quot;country&quot;: &quot;US&quot;,
+})
+reviews = client.dataset(reviews_run[&quot;defaultDatasetId&quot;]).list_items().items
+
+print(f&quot;Trends: {len(trends)} | Decoded News: {len(news)} | 1-2 Star App Reviews: {len(reviews)}&quot;)</code></pre>
+<hr/>
+<h2>Why Separate Decoded News URLs &amp; Star-Filtered Reviews Matter</h2>
+<ul>
+<li><strong>Google News RSS links break RAG scrapers and Slack digests</strong> because every link points to <code>news.google.com/rss/articles/CBMi...</code>. Decoding them via <code>Fbv4je</code> inside the same flat <code>$2.50/1K</code> event gives your downstream pipeline clean <code>reuters.com</code>, <code>techcrunch.com</code>, or <code>bankofengland.co.uk</code> URLs immediately.</li>
+<li><strong>Star-filtered reviews prevent wasted spend:</strong> Setting <code>minReviewRating: 1</code> and <code>maxReviewRating: 2</code> on the App Store &amp; Google Play Scraper only pushes and charges for negative reviews — letting product managers and indie builders extract exact churn triggers across iOS and Android simultaneously.</li>
+<li><strong>Zero-code n8n / Make ready:</strong> Every Actor supports <code>POST https://api.apify.com/v2/acts/leopoldsaint~&lt;actor-slug&gt;/run-sync-get-dataset-items?token=YOUR_APIFY_TOKEN</code> and Apify MCP (<code>https://mcp.apify.com</code>).</li>
+</ul></article></main>
+  <footer>
+    Built by <a href="https://apify.com/leopoldsaint" target="_blank" rel="noopener">Leopold Saint on Apify Store</a> ·
+    <a href="https://github.com/ketannsaint/apify-browserless-scrapers" target="_blank" rel="noopener">GitHub &amp; 22 n8n JSON Templates</a> ·
+    MCP: <code>https://mcp.apify.com</code> · Updated 2026-11-28
+  </footer>
+</body>
+</html>

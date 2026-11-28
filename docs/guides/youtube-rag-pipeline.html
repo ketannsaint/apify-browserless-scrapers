@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>How to Build a Fast YouTube Search -&gt; Transcript -&gt; Comments AI Research Pipeline Without Puppeteer | Browserless Apify Scrapers</title>
+  <meta name="description" content="Skip slow headless browsers. Combine direct YouTube search, transcript extraction, comment sentiment, and creator emails in under 10 seconds with Node.js, Python, n8n, or MCP."/>
+  <link rel="canonical" href="https://ketannsaint.github.io/apify-browserless-scrapers/guides/youtube-rag-pipeline.html"/>
+  <meta property="og:title" content="How to Build a Fast YouTube Search -&gt; Transcript -&gt; Comments AI Research Pipeline Without Puppeteer | Browserless Apify Scrapers"/>
+  <meta property="og:description" content="Skip slow headless browsers. Combine direct YouTube search, transcript extraction, comment sentiment, and creator emails in under 10 seconds with Node.js, Python, n8n, or MCP."/>
+  <meta property="og:url" content="https://ketannsaint.github.io/apify-browserless-scrapers/guides/youtube-rag-pipeline.html"/>
+  <meta property="og:type" content="website"/>
+  <style>
+:root { --bg:#0b1020; --panel:#121933; --border:#243056; --text:#e8eefc; --muted:#9fb0d9; --accent:#38bdf8; --green:#10b981; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+header { border-bottom:1px solid var(--border); background:#0f162d; position:sticky; top:0; z-index:10; }
+.nav { max-width:1100px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.brand { font-weight:700; color:#fff; text-decoration:none; font-size:1.05rem; }
+.nav-links { display:flex; gap:16px; flex-wrap:wrap; font-size:.9rem; }
+.nav-links a { color:var(--muted); text-decoration:none; }
+.nav-links a:hover { color:var(--accent); }
+.wrap { max-width:1100px; margin:0 auto; padding:32px 20px 64px; }
+.hero { background:linear-gradient(135deg,#132145,#0e1b35); border:1px solid var(--border); border-radius:16px; padding:32px; margin-bottom:28px; }
+.hero h1 { margin:0 0 10px; font-size:2rem; line-height:1.2; }
+.hero p { color:var(--muted); margin:0 0 20px; font-size:1.02rem; }
+.cta-row { display:flex; gap:12px; flex-wrap:wrap; }
+.btn { display:inline-block; padding:10px 16px; border-radius:10px; font-weight:600; text-decoration:none; font-size:.9rem; cursor:pointer; border:none; }
+.btn-primary { background:var(--accent); color:#071324; }
+.btn-secondary { border:1px solid var(--border); color:#fff; background:rgba(255,255,255,.04); }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:18px 0 32px; }
+.card { background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:20px; display:flex; flex-direction:column; justify-content:space-between; }
+.card h3 { margin:0 0 8px; font-size:1.05rem; }
+.card p { margin:0 0 14px; color:var(--muted); font-size:.9rem; }
+.pill { display:inline-block; font-size:.73rem; font-weight:700; padding:3px 9px; border-radius:999px; background:rgba(16,185,129,.15); color:#6ee7b7; margin-bottom:8px; }
+.pill-blue { background:rgba(56,189,248,.15); color:#7dd3fc; }
+article, .panel { background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:28px; margin-bottom:22px; }
+article h1 { margin-top:0; font-size:1.85rem; }
+article h2 { margin-top:26px; padding-top:16px; border-top:1px solid var(--border); font-size:1.28rem; }
+article a, .panel a { color:var(--accent); }
+pre { background:#070b17; border:1px solid var(--border); border-radius:10px; padding:16px; overflow-x:auto; font-size:.84rem; }
+code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; background:rgba(56,189,248,.12); padding:2px 5px; border-radius:5px; font-size:.88em; }
+pre code { background:none; padding:0; }
+.table-wrap { overflow-x:auto; margin:14px 0; }
+table { width:100%; border-collapse:collapse; font-size:.89rem; }
+th,td { border:1px solid var(--border); padding:10px 12px; text-align:left; }
+th { background:#0d1429; color:#fff; }
+tr.ours { background:rgba(16,185,129,.08); }
+blockquote { border-left:3px solid var(--accent); margin:16px 0; padding:8px 16px; background:rgba(56,189,248,.06); color:#d8e6ff; }
+input, select { background:#070b17; color:#fff; border:1px solid var(--border); border-radius:8px; padding:9px 12px; font-size:.95rem; }
+.calc-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin:16px 0; }
+.stat-box { background:#0a1126; border:1px solid var(--border); border-radius:12px; padding:16px; }
+.stat-num { font-size:1.75rem; font-weight:800; color:#6ee7b7; }
+footer { border-top:1px solid var(--border); color:var(--muted); font-size:.86rem; padding:24px 20px; text-align:center; }
+footer a { color:var(--accent); }
+</style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"How to Build a Fast YouTube Search -> Transcript -> Comments AI Research Pipeline Without Puppeteer","description":"Skip slow headless browsers. Combine direct YouTube search, transcript extraction, comment sentiment, and creator emails in under 10 seconds with Node.js, Python, n8n, or MCP.","datePublished":"2026-11-28","author":{"@type":"Person","name":"Leopold Saint","url":"https://apify.com/leopoldsaint"}}</script>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="https://ketannsaint.github.io/apify-browserless-scrapers/">Browserless Apify Scrapers (60)</a>
+      <div class="nav-links">
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/">Catalog</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/compare.html">Honest Comparisons</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/calculator.html">Cost Calculator</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/guides/google-maps-reddit-lead-engine.html">Guides</a>
+        <a href="https://apify.com/leopoldsaint" target="_blank" rel="noopener">Apify Store ↗</a>
+      </div>
+    </nav>
+  </header>
+  <main class="wrap"><article><span class="pill">AI / RAG · YOUTUBE STACK</span><h1>How to Build a Fast YouTube Search -&gt; Transcript -&gt; Comments AI Research Pipeline Without Puppeteer</h1><p>Most tutorials for building a YouTube AI research or RAG pipeline start by spinning up Playwright or Puppeteer, waiting 25 seconds per video, burning through residential proxies, and paying extra add-on fees just to filter by upload date.</p>
+<p>When you only need structured data — video metadata, full timestamped transcripts/SRT, top comments with reply threads, and creator contact details — launching a full Chromium browser is pure overhead.</p>
+<p>In this guide, I'll walk through a <strong>pure HTTP / InnerTube pipeline</strong> running on 512 MB containers that finishes a multi-video search + transcript + comments run in <strong>4–10 seconds</strong> and costs roughly <strong>$0.002–$0.003 per item</strong> (under Apify's $5 monthly free tier, you can process 1,500+ videos/transcripts a month for $0).</p>
+<h2>The 4-Step YouTube Intelligence Stack</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>Step</th>
+<th>Actor</th>
+<th>What it returns</th>
+<th>Speed (512 MB)</th>
+<th>Price (Free / Gold+)</th>
+</tr></thead><tbody>
+<tr>
+<td>1. Discover videos</td>
+<td><a href="https://apify.com/leopoldsaint/youtube-video-channel-scraper" target="_blank" rel="noopener">YouTube Video, Channel &amp; Search Scraper</a></td>
+<td>Exact views, likes, publish dates, captions flag, Shorts/Streams, free upload-date filters</td>
+<td>~4.2s / 6 videos</td>
+<td>$2.50 / $1.60 per 1K</td>
+</tr>
+<tr>
+<td>2. Pull transcripts</td>
+<td><a href="https://apify.com/leopoldsaint/youtube-transcript-scraper" target="_blank" rel="noopener">YouTube Transcript &amp; Subtitles Scraper</a></td>
+<td>Clean plain text, timestamped segments, SRT, WebVTT, on-the-fly translation</td>
+<td>~5–17s / batch</td>
+<td>$3.00 / $1.80 per 1K</td>
+</tr>
+<tr>
+<td>3. Mine objections</td>
+<td><a href="https://apify.com/leopoldsaint/youtube-comments-scraper" target="_blank" rel="noopener">YouTube Comments &amp; Replies Scraper</a></td>
+<td>Top/newest comments, nested replies, pinned/hearted flags, <code>minLikes</code> &amp; keyword filters</td>
+<td>~3.6s / 10 comments</td>
+<td>$2.00 / $1.25 per 1K</td>
+</tr>
+<tr>
+<td>4. Creator contacts</td>
+<td><a href="https://apify.com/leopoldsaint/youtube-channel-email-scraper" target="_blank" rel="noopener">YouTube Channel &amp; Creator Business Email Scraper</a></td>
+<td>3-tier business email discovery (channel bio, linked website <code>/contact</code>, recent video descriptions)</td>
+<td>~4.5s / batch</td>
+<td>$15.00 / $9.00 per 1K</td>
+</tr>
+</tbody></table></div>
+<p>All four Actors filter <strong>before</strong> charging — captionless videos (with <code>skipUnavailable: true</code>) and comments that don't match your keyword or <code>minLikes</code> filters cost <code>$0</code>.</p>
+<hr/>
+<h2>Option 1: End-to-End TypeScript / Node.js Pipeline</h2>
+<p>Install the official client:</p>
+<pre><code class="lang-bash">npm install apify-client</code></pre>
+<p>Run a search for recent videos in your niche, pull full transcripts for the top performers, and extract audience pain-point comments mentioning pricing or alternatives:</p>
+<pre><code class="lang-typescript">import { ApifyClient } from 'apify-client';
+
+const client = new ApifyClient({ token: process.env.APIFY_TOKEN });
+
+// 1. Discover high-view videos published in the past month (no upload-date surcharge)
+const videoRun = await client.actor('leopoldsaint/youtube-video-channel-scraper').call({
+    searchQueries: ['ai agents workflow'],
+    uploadDate: 'month',
+    sortBy: 'viewCount',
+    maxTotalVideos: 10,
+    includeVideoDetails: true,
+    minViews: 5000,
+});
+const { items: videos } = await client.dataset(videoRun.defaultDatasetId).listItems();
+const videoUrls = videos.filter((v) =&gt; v.hasCaptions).map((v) =&gt; v.videoUrl);
+
+// 2. Pull clean RAG-ready transcripts (plain text + segments + SRT)
+const transcriptRun = await client.actor('leopoldsaint/youtube-transcript-scraper').call({
+    videoUrls,
+    languages: ['en'],
+    preferManualCaptions: true,
+    includeSegments: true,
+    includeSrt: false,
+    skipUnavailable: true,
+    maxTotalVideos: 10,
+});
+const { items: transcripts } = await client.dataset(transcriptRun.defaultDatasetId).listItems();
+
+// 3. Mine viewer objections &amp; tool requests from comments
+const commentsRun = await client.actor('leopoldsaint/youtube-comments-scraper').call({
+    videoUrls: videoUrls.slice(0, 5),
+    sortBy: 'top',
+    includeReplies: true,
+    maxRepliesPerComment: 3,
+    containsKeywords: ['pricing', 'alternative', 'issue', 'broken', 'wish'],
+    maxTotalComments: 100,
+});
+const { items: comments } = await client.dataset(commentsRun.defaultDatasetId).listItems();
+
+console.log({
+    videosDiscovered: videos.length,
+    transcriptsExtracted: transcripts.length,
+    totalWords: transcripts.reduce((sum, t) =&gt; sum + (Number(t.wordCount) || 0), 0),
+    objectionComments: comments.length,
+});</code></pre>
+<hr/>
+<h2>Option 2: Python (Ready for LangChain / LlamaIndex / Vector DBs)</h2>
+<pre><code class="lang-python">import os
+from apify_client import ApifyClient
+
+client = ApifyClient(os.environ[&quot;APIFY_TOKEN&quot;])
+
+# Pull transcripts directly from a playlist, channel @handle, or search query
+run = client.actor(&quot;leopoldsaint/youtube-transcript-scraper&quot;).call(run_input={
+    &quot;videoUrls&quot;: [&quot;@mkbhd&quot;],
+    &quot;languages&quot;: [&quot;en&quot;],
+    &quot;includeSegments&quot;: False,
+    &quot;skipUnavailable&quot;: True,
+    &quot;maxVideosPerSource&quot;: 10,
+    &quot;maxTotalVideos&quot;: 10,
+})
+
+documents = []
+for item in client.dataset(run[&quot;defaultDatasetId&quot;]).iterate_items():
+    documents.append({
+        &quot;id&quot;: item[&quot;videoId&quot;],
+        &quot;title&quot;: item[&quot;title&quot;],
+        &quot;channel&quot;: item[&quot;channelName&quot;],
+        &quot;url&quot;: item[&quot;videoUrl&quot;],
+        &quot;text&quot;: item[&quot;transcriptText&quot;],
+        &quot;words&quot;: item[&quot;wordCount&quot;],
+    })
+
+print(f&quot;Loaded {len(documents)} transcripts ready for chunking &amp; embedding.&quot;)</code></pre>
+<hr/>
+<h2>Option 3: 1-Node n8n or Make Automation (No Code)</h2>
+<p>Instead of polling run IDs across multiple steps, use Apify's synchronous endpoint inside a single <strong>n8n HTTP Request</strong> or <strong>Make HTTP</strong> module:</p>
+<ul>
+<li><strong>Method:</strong> <code>POST</code></li>
+<li><strong>URL:</strong> <code>https://api.apify.com/v2/acts/leopoldsaint~youtube-transcript-scraper/run-sync-get-dataset-items?token=YOUR_APIFY_TOKEN</code></li>
+<li><strong>Headers:</strong> <code>Content-Type: application/json</code></li>
+<li><strong>Body:</strong></li>
+</ul>
+<pre><code class="lang-json">{
+    &quot;searchQueries&quot;: [&quot;n8n ai agent tutorial&quot;],
+    &quot;languages&quot;: [&quot;en&quot;],
+    &quot;includeSegments&quot;: false,
+    &quot;skipUnavailable&quot;: true,
+    &quot;maxTotalVideos&quot;: 5
+}</code></pre>
+<p>The node returns a clean JSON array of transcripts directly so you can pipe <code>{{ $json.transcriptText }}</code> straight into an OpenAI, Claude, or Gemini summarization node and post the digest to Slack or Notion.</p>
+<hr/>
+<h2>Option 4: Connect Directly to Claude, Cursor, or OpenAI Agents via MCP</h2>
+<p>All four Actors work out of the box with Apify's hosted MCP server (<code>https://mcp.apify.com</code>). Add them to your MCP client config and prompt your agent directly:</p>
+<blockquote><em>&quot;Find the top 10 YouTube videos about Shopify CRO uploaded this month, pull their transcripts, and list the top 5 recurring buyer objections from the comment sections.&quot;</em></blockquote>
+<hr/>
+<h2>Why Direct HTTP Beats Browser Scraping Here</h2>
+<ul>
+<li><strong>Speed:</strong> 2–5 seconds per batch instead of 30–90 seconds waiting for Chromium to boot and hydrate YouTube's SPA.</li>
+<li><strong>Memory &amp; Cost:</strong> Runs cleanly in <strong>512 MB RAM</strong> (<code>~$0.0001–$0.0002</code> platform compute) instead of 4 GB browser containers.</li>
+<li><strong>Predictable Billing:</strong> Flat pay-per-event pricing with platform usage included and zero hidden surcharges for upload-date filters or reply threads.</li>
+</ul>
+<p>Try any of the four Actors free with Apify's $5 monthly credit:</p>
+<ul>
+<li><a href="https://apify.com/leopoldsaint/youtube-video-channel-scraper" target="_blank" rel="noopener">YouTube Video, Channel &amp; Search Scraper</a></li>
+<li><a href="https://apify.com/leopoldsaint/youtube-transcript-scraper" target="_blank" rel="noopener">YouTube Transcript &amp; Subtitles Scraper</a></li>
+<li><a href="https://apify.com/leopoldsaint/youtube-comments-scraper" target="_blank" rel="noopener">YouTube Comments &amp; Replies Scraper</a></li>
+<li><a href="https://apify.com/leopoldsaint/youtube-channel-email-scraper" target="_blank" rel="noopener">YouTube Channel &amp; Creator Business Email Scraper</a></li>
+</ul></article></main>
+  <footer>
+    Built by <a href="https://apify.com/leopoldsaint" target="_blank" rel="noopener">Leopold Saint on Apify Store</a> ·
+    <a href="https://github.com/ketannsaint/apify-browserless-scrapers" target="_blank" rel="noopener">GitHub &amp; 22 n8n JSON Templates</a> ·
+    MCP: <code>https://mcp.apify.com</code> · Updated 2026-11-28
+  </footer>
+</body>
+</html>

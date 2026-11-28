@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ketannsaint.github.io/apify-browserless-scrapers/sitemap.xml

@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Honest Apify Scraper Pricing Comparisons (Live Store Data 2026)</title>
+  <meta name="description" content="Side-by-side Apify Store scraper pricing read live from the public Apify API: per-1K cost, start fees, event counts, and 30-day run success rates."/>
+  <link rel="canonical" href="https://ketannsaint.github.io/apify-browserless-scrapers/compare.html"/>
+  <meta property="og:title" content="Honest Apify Scraper Pricing Comparisons (Live Store Data 2026)"/>
+  <meta property="og:description" content="Side-by-side Apify Store scraper pricing read live from the public Apify API: per-1K cost, start fees, event counts, and 30-day run success rates."/>
+  <meta property="og:url" content="https://ketannsaint.github.io/apify-browserless-scrapers/compare.html"/>
+  <meta property="og:type" content="website"/>
+  <style>
+:root { --bg:#0b1020; --panel:#121933; --border:#243056; --text:#e8eefc; --muted:#9fb0d9; --accent:#38bdf8; --green:#10b981; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+header { border-bottom:1px solid var(--border); background:#0f162d; position:sticky; top:0; z-index:10; }
+.nav { max-width:1100px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.brand { font-weight:700; color:#fff; text-decoration:none; font-size:1.05rem; }
+.nav-links { display:flex; gap:16px; flex-wrap:wrap; font-size:.9rem; }
+.nav-links a { color:var(--muted); text-decoration:none; }
+.nav-links a:hover { color:var(--accent); }
+.wrap { max-width:1100px; margin:0 auto; padding:32px 20px 64px; }
+.hero { background:linear-gradient(135deg,#132145,#0e1b35); border:1px solid var(--border); border-radius:16px; padding:32px; margin-bottom:28px; }
+.hero h1 { margin:0 0 10px; font-size:2rem; line-height:1.2; }
+.hero p { color:var(--muted); margin:0 0 20px; font-size:1.02rem; }
+.cta-row { display:flex; gap:12px; flex-wrap:wrap; }
+.btn { display:inline-block; padding:10px 16px; border-radius:10px; font-weight:600; text-decoration:none; font-size:.9rem; cursor:pointer; border:none; }
+.btn-primary { background:var(--accent); color:#071324; }
+.btn-secondary { border:1px solid var(--border); color:#fff; background:rgba(255,255,255,.04); }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:18px 0 32px; }
+.card { background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:20px; display:flex; flex-direction:column; justify-content:space-between; }
+.card h3 { margin:0 0 8px; font-size:1.05rem; }
+.card p { margin:0 0 14px; color:var(--muted); font-size:.9rem; }
+.pill { display:inline-block; font-size:.73rem; font-weight:700; padding:3px 9px; border-radius:999px; background:rgba(16,185,129,.15); color:#6ee7b7; margin-bottom:8px; }
+.pill-blue { background:rgba(56,189,248,.15); color:#7dd3fc; }
+article, .panel { background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:28px; margin-bottom:22px; }
+article h1 { margin-top:0; font-size:1.85rem; }
+article h2 { margin-top:26px; padding-top:16px; border-top:1px solid var(--border); font-size:1.28rem; }
+article a, .panel a { color:var(--accent); }
+pre { background:#070b17; border:1px solid var(--border); border-radius:10px; padding:16px; overflow-x:auto; font-size:.84rem; }
+code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; background:rgba(56,189,248,.12); padding:2px 5px; border-radius:5px; font-size:.88em; }
+pre code { background:none; padding:0; }
+.table-wrap { overflow-x:auto; margin:14px 0; }
+table { width:100%; border-collapse:collapse; font-size:.89rem; }
+th,td { border:1px solid var(--border); padding:10px 12px; text-align:left; }
+th { background:#0d1429; color:#fff; }
+tr.ours { background:rgba(16,185,129,.08); }
+blockquote { border-left:3px solid var(--accent); margin:16px 0; padding:8px 16px; background:rgba(56,189,248,.06); color:#d8e6ff; }
+input, select { background:#070b17; color:#fff; border:1px solid var(--border); border-radius:8px; padding:9px 12px; font-size:.95rem; }
+.calc-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin:16px 0; }
+.stat-box { background:#0a1126; border:1px solid var(--border); border-radius:12px; padding:16px; }
+.stat-num { font-size:1.75rem; font-weight:800; color:#6ee7b7; }
+footer { border-top:1px solid var(--border); color:var(--muted); font-size:.86rem; padding:24px 20px; text-align:center; }
+footer a { color:var(--accent); }
+</style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Apify Scraper Comparisons","url":"https://ketannsaint.github.io/apify-browserless-scrapers/compare.html"}</script>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="https://ketannsaint.github.io/apify-browserless-scrapers/">Browserless Apify Scrapers (60)</a>
+      <div class="nav-links">
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/">Catalog</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/compare.html">Honest Comparisons</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/calculator.html">Cost Calculator</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/guides/google-maps-reddit-lead-engine.html">Guides</a>
+        <a href="https://apify.com/leopoldsaint" target="_blank" rel="noopener">Apify Store ↗</a>
+      </div>
+    </nav>
+  </header>
+  <main class="wrap">
+          <section class="hero">
+            <span class="pill">ALL NUMBERS READ LIVE FROM APIFY STORE API ON 2026-11-28</span>
+            <h1>Apify Web Scrapers Compared Honestly</h1>
+            <p>Where an incumbent has more users or lower raw row pricing, the table shows it. Our 60 browserless Actors compete on <strong>$0 start fees</strong>, <strong>no stacked add-on events</strong>, <strong>free built-in enrichment</strong>, and <strong>256–512MB speed</strong>.</p>
+            <div class="cta-row"><a class="btn btn-primary" href="https://ketannsaint.github.io/apify-browserless-scrapers/calculator.html">Open Interactive Cost Calculator →</a></div>
+          </section>
+          
+      <div class="panel">
+        <span class="pill pill-blue">LIVE STORE DATA READ 2026-11-28</span>
+        <h2>Google Maps + Website Email Scrapers</h2>
+        <p style="color:var(--muted)">Compass is the volume leader with deep reviews/photos, but bills stacked add-ons for email/contact enrichment. Our browserless Actor includes website email, phone, socials &amp; tech stack in one flat $1.50/1K rate ($0 start fee).</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Actor</th><th>Free / 1K</th><th>Gold / 1K</th><th>Start Fee</th><th>Billable Events</th><th>30d Success</th><th>Monthly Users</th></tr></thead>
+          <tbody>
+            <tr class="ours">
+                      <td><a href="https://apify.com/leopoldsaint/google-maps-leads-scraper" target="_blank" rel="noopener"><strong>leopoldsaint/google-maps-leads-scraper</strong></a></td>
+                      <td>$1.50</td>
+                      <td>$0.90</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>100%</td>
+                      <td>1</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/compass/crawler-google-places" target="_blank" rel="noopener"><strong>compass/crawler-google-places</strong></a></td>
+                      <td>$4.00</td>
+                      <td>$1.50</td>
+                      <td>Yes</td>
+                      <td>11</td>
+                      <td>97%</td>
+                      <td>48,948</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/lukaskrivka/google-maps-with-contact-details" target="_blank" rel="noopener"><strong>lukaskrivka/google-maps-with-contact-details</strong></a></td>
+                      <td>$5.00</td>
+                      <td>$2.10</td>
+                      <td>Yes</td>
+                      <td>8</td>
+                      <td>91%</td>
+                      <td>1,871</td>
+                    </tr>
+<tr class="ours">
+                      <td><a href="https://apify.com/leopoldsaint/businesses-without-websites-leads" target="_blank" rel="noopener"><strong>leopoldsaint/businesses-without-websites-leads</strong></a></td>
+                      <td>$8.00</td>
+                      <td>$5.00</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>n/a</td>
+                      <td>0</td>
+                    </tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="panel">
+        <span class="pill pill-blue">LIVE STORE DATA READ 2026-11-28</span>
+        <h2>YouTube Video, Transcript &amp; Comment Scrapers</h2>
+        <p style="color:var(--muted)">Streamers and Pintostudio have large user bases; our browserless InnerTube stack eliminates browser boot time, includes upload-date filters free, skips captionless videos free, and charges $0 start fee.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Actor</th><th>Free / 1K</th><th>Gold / 1K</th><th>Start Fee</th><th>Billable Events</th><th>30d Success</th><th>Monthly Users</th></tr></thead>
+          <tbody>
+            <tr class="ours">
+                      <td><a href="https://apify.com/leopoldsaint/youtube-transcript-scraper" target="_blank" rel="noopener"><strong>leopoldsaint/youtube-transcript-scraper</strong></a></td>
+                      <td>$3.00</td>
+                      <td>$1.80</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>100%</td>
+                      <td>1</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/pintostudio/youtube-transcript-scraper" target="_blank" rel="noopener"><strong>pintostudio/youtube-transcript-scraper</strong></a></td>
+                      <td>$10.00</td>
+                      <td>$10.00</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>96%</td>
+                      <td>2,643</td>
+                    </tr>
+<tr class="ours">
+                      <td><a href="https://apify.com/leopoldsaint/youtube-video-channel-scraper" target="_blank" rel="noopener"><strong>leopoldsaint/youtube-video-channel-scraper</strong></a></td>
+                      <td>$2.50</td>
+                      <td>$1.60</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>100%</td>
+                      <td>1</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/streamers/youtube-scraper" target="_blank" rel="noopener"><strong>streamers/youtube-scraper</strong></a></td>
+                      <td>$4.00</td>
+                      <td>$2.40</td>
+                      <td>No ($0)</td>
+                      <td>5</td>
+                      <td>99%</td>
+                      <td>18,201</td>
+                    </tr>
+<tr class="ours">
+                      <td><a href="https://apify.com/leopoldsaint/youtube-comments-scraper" target="_blank" rel="noopener"><strong>leopoldsaint/youtube-comments-scraper</strong></a></td>
+                      <td>$2.00</td>
+                      <td>$1.25</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>100%</td>
+                      <td>1</td>
+                    </tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="panel">
+        <span class="pill pill-blue">LIVE STORE DATA READ 2026-11-28</span>
+        <h2>Reddit, Google Ads Transparency &amp; ATS Career-Site Jobs</h2>
+        <p style="color:var(--muted)">Flat per-result pricing with $0 start fees and zero stacked add-on events (unlike multi-event ad scrapers that bill separately for advertiser, detail, and text).</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Actor</th><th>Free / 1K</th><th>Gold / 1K</th><th>Start Fee</th><th>Billable Events</th><th>30d Success</th><th>Monthly Users</th></tr></thead>
+          <tbody>
+            <tr class="ours">
+                      <td><a href="https://apify.com/leopoldsaint/reddit-scraper-fast" target="_blank" rel="noopener"><strong>leopoldsaint/reddit-scraper-fast</strong></a></td>
+                      <td>$1.50</td>
+                      <td>$0.90</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>100%</td>
+                      <td>1</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/trudax/reddit-scraper-lite" target="_blank" rel="noopener"><strong>trudax/reddit-scraper-lite</strong></a></td>
+                      <td>$1.80</td>
+                      <td>$1.00</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>10%</td>
+                      <td>7,161</td>
+                    </tr>
+<tr class="ours">
+                      <td><a href="https://apify.com/leopoldsaint/google-ads-transparency-scraper" target="_blank" rel="noopener"><strong>leopoldsaint/google-ads-transparency-scraper</strong></a></td>
+                      <td>$2.50</td>
+                      <td>$1.60</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>100%</td>
+                      <td>1</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/scrapesage/google-ads-transparency-scraper" target="_blank" rel="noopener"><strong>scrapesage/google-ads-transparency-scraper</strong></a></td>
+                      <td>$2.00</td>
+                      <td>$2.00</td>
+                      <td>No ($0)</td>
+                      <td>4</td>
+                      <td>100%</td>
+                      <td>1,594</td>
+                    </tr>
+<tr class="ours">
+                      <td><a href="https://apify.com/leopoldsaint/career-site-jobs-scraper" target="_blank" rel="noopener"><strong>leopoldsaint/career-site-jobs-scraper</strong></a></td>
+                      <td>$4.00</td>
+                      <td>$2.50</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>100%</td>
+                      <td>1</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/fantastic-jobs/career-site-job-listing-api" target="_blank" rel="noopener"><strong>fantastic-jobs/career-site-job-listing-api</strong></a></td>
+                      <td>$12.00</td>
+                      <td>$4.00</td>
+                      <td>Yes</td>
+                      <td>2</td>
+                      <td>100%</td>
+                      <td>1,611</td>
+                    </tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="panel">
+        <span class="pill pill-blue">LIVE STORE DATA READ 2026-11-28</span>
+        <h2>Tech Stack, Autocomplete Keywords, YC, SEC Form D &amp; Google Flights</h2>
+        <p style="color:var(--muted)">Purpose-built B2B prospecting, travel, and SEO research tools running on 256MB direct-HTTP containers with $0 start fee and built-in filtering.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Actor</th><th>Free / 1K</th><th>Gold / 1K</th><th>Start Fee</th><th>Billable Events</th><th>30d Success</th><th>Monthly Users</th></tr></thead>
+          <tbody>
+            <tr class="ours">
+                      <td><a href="https://apify.com/leopoldsaint/website-tech-stack-detector" target="_blank" rel="noopener"><strong>leopoldsaint/website-tech-stack-detector</strong></a></td>
+                      <td>$2.50</td>
+                      <td>$1.60</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>n/a</td>
+                      <td>0</td>
+                    </tr>
+<tr class="ours">
+                      <td><a href="https://apify.com/leopoldsaint/google-autocomplete-keyword-scraper" target="_blank" rel="noopener"><strong>leopoldsaint/google-autocomplete-keyword-scraper</strong></a></td>
+                      <td>$1.00</td>
+                      <td>$0.55</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>n/a</td>
+                      <td>0</td>
+                    </tr>
+<tr class="ours">
+                      <td><a href="https://apify.com/leopoldsaint/google-flights-scraper-fast" target="_blank" rel="noopener"><strong>leopoldsaint/google-flights-scraper-fast</strong></a></td>
+                      <td>$1.00</td>
+                      <td>$0.70</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>100%</td>
+                      <td>1</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/lergassy/google-flights-scraper" target="_blank" rel="noopener"><strong>lergassy/google-flights-scraper</strong></a></td>
+                      <td>$1.00</td>
+                      <td>$0.70</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>99%</td>
+                      <td>927</td>
+                    </tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="panel">
+        <span class="pill pill-blue">LIVE STORE DATA READ 2026-11-28</span>
+        <h2>Threads, Snapchat, Audio/Podcast Whisper AI &amp; Video Frame Extractors</h2>
+        <p style="color:var(--muted)">High-growth late-2026 media &amp; social scrapers running with $0 start fee, zero external Whisper API keys, and 256MB-1024MB optimized footprints.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Actor</th><th>Free / 1K</th><th>Gold / 1K</th><th>Start Fee</th><th>Billable Events</th><th>30d Success</th><th>Monthly Users</th></tr></thead>
+          <tbody>
+            <tr class="">
+                      <td><a href="https://apify.com/lergassy/threads-scraper" target="_blank" rel="noopener"><strong>lergassy/threads-scraper</strong></a></td>
+                      <td>$2.00</td>
+                      <td>$1.40</td>
+                      <td>No ($0)</td>
+                      <td>4</td>
+                      <td>100%</td>
+                      <td>616</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/parseforge/snapchat-scraper" target="_blank" rel="noopener"><strong>parseforge/snapchat-scraper</strong></a></td>
+                      <td>$2.50</td>
+                      <td>$2.00</td>
+                      <td>No ($0)</td>
+                      <td>2</td>
+                      <td>100%</td>
+                      <td>100</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/tidytools/audio-transcriber" target="_blank" rel="noopener"><strong>tidytools/audio-transcriber</strong></a></td>
+                      <td>$6.00</td>
+                      <td>$4.80</td>
+                      <td>No ($0)</td>
+                      <td>5</td>
+                      <td>98%</td>
+                      <td>326</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/seemuapps/video-frame-extractor" target="_blank" rel="noopener"><strong>seemuapps/video-frame-extractor</strong></a></td>
+                      <td>$2.00</td>
+                      <td>$2.00</td>
+                      <td>No ($0)</td>
+                      <td>4</td>
+                      <td>100%</td>
+                      <td>88</td>
+                    </tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="panel">
+        <span class="pill pill-blue">LIVE STORE DATA READ 2026-11-28</span>
+        <h2>LinkedIn Jobs, Amazon Search &amp; Best Sellers, Google Hotels &amp; PDF Extractors</h2>
+        <p style="color:var(--muted)">Zero-cookie LinkedIn Jobs (full descriptions included), 10-marketplace Amazon search &amp; charts, live Google Hotels prices, and native PyMuPDF + pdfplumber PDF-to-RAG extraction — all with $0 start fee.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Actor</th><th>Free / 1K</th><th>Gold / 1K</th><th>Start Fee</th><th>Billable Events</th><th>30d Success</th><th>Monthly Users</th></tr></thead>
+          <tbody>
+            <tr class="">
+                      <td><a href="https://apify.com/memo23/linkedin-jobs-scraper" target="_blank" rel="noopener"><strong>memo23/linkedin-jobs-scraper</strong></a></td>
+                      <td>$0.69</td>
+                      <td>$0.25</td>
+                      <td>Yes</td>
+                      <td>4</td>
+                      <td>99%</td>
+                      <td>133</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/santamaria-automations/amazon-search-scraper" target="_blank" rel="noopener"><strong>santamaria-automations/amazon-search-scraper</strong></a></td>
+                      <td>$2.00</td>
+                      <td>$1.50</td>
+                      <td>Yes</td>
+                      <td>2</td>
+                      <td>97%</td>
+                      <td>1,067</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/junglee/amazon-bestsellers" target="_blank" rel="noopener"><strong>junglee/amazon-bestsellers</strong></a></td>
+                      <td>$5.90</td>
+                      <td>$3.20</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>99%</td>
+                      <td>510</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/kestrel/google-hotels-prices" target="_blank" rel="noopener"><strong>kestrel/google-hotels-prices</strong></a></td>
+                      <td>$4.00</td>
+                      <td>$4.00</td>
+                      <td>No ($0)</td>
+                      <td>4</td>
+                      <td>99%</td>
+                      <td>178</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/memo23/pdf-text-extractor" target="_blank" rel="noopener"><strong>memo23/pdf-text-extractor</strong></a></td>
+                      <td>$5.00</td>
+                      <td>$4.00</td>
+                      <td>Yes</td>
+                      <td>4</td>
+                      <td>100%</td>
+                      <td>167</td>
+                    </tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="panel">
+        <span class="pill pill-blue">LIVE STORE DATA READ 2026-11-28</span>
+        <h2>Instagram Reels Transcripts, Video Hook Breakdown, IG Downloader, IG Emails &amp; Amazon ASIN Details</h2>
+        <p style="color:var(--muted)">H2-2026 highest-ARPU social video &amp; ecommerce stack: local CPU Whisper + FFmpeg creative briefs (no extra per-minute or failed-download fees), permanent KVS MP4/MP3 hosting, zero-login IG bio/Linktree email enrichment, and 10-store Amazon /dp/ ASIN intelligence — all with $0 start fee.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Actor</th><th>Free / 1K</th><th>Gold / 1K</th><th>Start Fee</th><th>Billable Events</th><th>30d Success</th><th>Monthly Users</th></tr></thead>
+          <tbody>
+            <tr class="ours">
+                      <td><a href="https://apify.com/leopoldsaint/instagram-reels-transcript-scraper" target="_blank" rel="noopener"><strong>leopoldsaint/instagram-reels-transcript-scraper</strong></a></td>
+                      <td>$8.00</td>
+                      <td>$5.00</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>n/a</td>
+                      <td>0</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/steadyfetch/instagram-reel-transcript-scraper" target="_blank" rel="noopener"><strong>steadyfetch/instagram-reel-transcript-scraper</strong></a></td>
+                      <td>$15.00</td>
+                      <td>$10.00</td>
+                      <td>No ($0)</td>
+                      <td>4</td>
+                      <td>99%</td>
+                      <td>4,594</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/tubetext/instagram-reels-transcript" target="_blank" rel="noopener"><strong>tubetext/instagram-reels-transcript</strong></a></td>
+                      <td>$10.00</td>
+                      <td>$7.50</td>
+                      <td>Yes</td>
+                      <td>4</td>
+                      <td>98%</td>
+                      <td>921</td>
+                    </tr>
+<tr class="ours">
+                      <td><a href="https://apify.com/leopoldsaint/video-hook-script-breakdown" target="_blank" rel="noopener"><strong>leopoldsaint/video-hook-script-breakdown</strong></a></td>
+                      <td>$20.00</td>
+                      <td>$11.00</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>n/a</td>
+                      <td>0</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/tubetext/video-breakdown-ai" target="_blank" rel="noopener"><strong>tubetext/video-breakdown-ai</strong></a></td>
+                      <td>$30.00</td>
+                      <td>$22.00</td>
+                      <td>Yes</td>
+                      <td>5</td>
+                      <td>98%</td>
+                      <td>183</td>
+                    </tr>
+<tr class="ours">
+                      <td><a href="https://apify.com/leopoldsaint/instagram-video-downloader" target="_blank" rel="noopener"><strong>leopoldsaint/instagram-video-downloader</strong></a></td>
+                      <td>$2.50</td>
+                      <td>$1.60</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>n/a</td>
+                      <td>0</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/memo23/instagram-video-downloader" target="_blank" rel="noopener"><strong>memo23/instagram-video-downloader</strong></a></td>
+                      <td>$2.00</td>
+                      <td>$1.60</td>
+                      <td>Yes</td>
+                      <td>4</td>
+                      <td>98%</td>
+                      <td>231</td>
+                    </tr>
+<tr class="ours">
+                      <td><a href="https://apify.com/leopoldsaint/instagram-email-contact-scraper" target="_blank" rel="noopener"><strong>leopoldsaint/instagram-email-contact-scraper</strong></a></td>
+                      <td>$8.00</td>
+                      <td>$5.00</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>n/a</td>
+                      <td>0</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/zaver.api/instagram-email-contact-extractor" target="_blank" rel="noopener"><strong>zaver.api/instagram-email-contact-extractor</strong></a></td>
+                      <td>$10.00</td>
+                      <td>$10.00</td>
+                      <td>Yes</td>
+                      <td>3</td>
+                      <td>99%</td>
+                      <td>197</td>
+                    </tr>
+<tr class="ours">
+                      <td><a href="https://apify.com/leopoldsaint/amazon-product-details-scraper" target="_blank" rel="noopener"><strong>leopoldsaint/amazon-product-details-scraper</strong></a></td>
+                      <td>$2.00</td>
+                      <td>$1.25</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>n/a</td>
+                      <td>0</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/delicious_zebu/amazon-product-details-scraper" target="_blank" rel="noopener"><strong>delicious_zebu/amazon-product-details-scraper</strong></a></td>
+                      <td>$2.50</td>
+                      <td>$1.50</td>
+                      <td>Yes</td>
+                      <td>2</td>
+                      <td>100%</td>
+                      <td>299</td>
+                    </tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="panel">
+        <span class="pill pill-blue">LIVE STORE DATA READ 2026-11-28</span>
+        <h2>Screenshot/PDF API, Lighthouse CWV Auditor, Bulk Image Optimizer, Instagram Posts &amp; BBB Directory</h2>
+        <p style="color:var(--muted)">Anti-bot-proof Chromium utilities (zero PSI API 429 limits, sharp WebP + ZIP bundling at 7x lower cost than $56-$70/1K rivals) plus direct zero-login Instagram Profiles/Posts and US/Canada BBB accredited business leads — all with $0 start fee.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Actor</th><th>Free / 1K</th><th>Gold / 1K</th><th>Start Fee</th><th>Billable Events</th><th>30d Success</th><th>Monthly Users</th></tr></thead>
+          <tbody>
+            <tr class="">
+                      <td><a href="https://apify.com/moonweil/url-screenshot-api" target="_blank" rel="noopener"><strong>moonweil/url-screenshot-api</strong></a></td>
+                      <td>$4.00</td>
+                      <td>$4.00</td>
+                      <td>Yes</td>
+                      <td>2</td>
+                      <td>96%</td>
+                      <td>161</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/josh99smith/pagespeed-insights-audit" target="_blank" rel="noopener"><strong>josh99smith/pagespeed-insights-audit</strong></a></td>
+                      <td>$4.00</td>
+                      <td>$4.00</td>
+                      <td>No ($0)</td>
+                      <td>1</td>
+                      <td>100%</td>
+                      <td>143</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/hipersoft/bulk-image-downloader" target="_blank" rel="noopener"><strong>hipersoft/bulk-image-downloader</strong></a></td>
+                      <td>$56.00</td>
+                      <td>$28.00</td>
+                      <td>Yes</td>
+                      <td>2</td>
+                      <td>100%</td>
+                      <td>50</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/dami_studio/instagram-profile-scraper" target="_blank" rel="noopener"><strong>dami_studio/instagram-profile-scraper</strong></a></td>
+                      <td>$0.70</td>
+                      <td>$0.67</td>
+                      <td>Yes</td>
+                      <td>5</td>
+                      <td>100%</td>
+                      <td>236</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/piotrv1001/bbb-business-details-scraper" target="_blank" rel="noopener"><strong>piotrv1001/bbb-business-details-scraper</strong></a></td>
+                      <td>$15.00</td>
+                      <td>$15.00</td>
+                      <td>No ($0)</td>
+                      <td>3</td>
+                      <td>100%</td>
+                      <td>40</td>
+                    </tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="panel">
+        <span class="pill pill-blue">LIVE STORE DATA READ 2026-11-28</span>
+        <h2>Shopify Products, Yahoo Finance, Remote Jobs (6 Boards), Apple Maps Leads &amp; Chrome Web Store</h2>
+        <p style="color:var(--muted)">Pure 256MB direct-HTTP APIs with zero stacked surcharges: Shopify stock &amp; currency included ($1/1K vs $1.80 stacked), 6 deduplicated remote job boards ($1.50/1K vs $5/1K), Apple Maps with free website email extraction ($2.50/1K vs $3.99 + $0.02 start), and Chrome Web Store full detail + developer emails included ($2/1K vs $4.20 stacked).</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Actor</th><th>Free / 1K</th><th>Gold / 1K</th><th>Start Fee</th><th>Billable Events</th><th>30d Success</th><th>Monthly Users</th></tr></thead>
+          <tbody>
+            <tr class="">
+                      <td><a href="https://apify.com/trovevault/shopify-products-scraper" target="_blank" rel="noopener"><strong>trovevault/shopify-products-scraper</strong></a></td>
+                      <td>$0.90</td>
+                      <td>$0.65</td>
+                      <td>Yes</td>
+                      <td>3</td>
+                      <td>99%</td>
+                      <td>152</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/memo23/yahoo-finance-scraper" target="_blank" rel="noopener"><strong>memo23/yahoo-finance-scraper</strong></a></td>
+                      <td>$1.00</td>
+                      <td>$0.80</td>
+                      <td>Yes</td>
+                      <td>2</td>
+                      <td>98%</td>
+                      <td>111</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/hirebase/remote-jobs" target="_blank" rel="noopener"><strong>hirebase/remote-jobs</strong></a></td>
+                      <td>$5.00</td>
+                      <td>$5.00</td>
+                      <td>Yes</td>
+                      <td>2</td>
+                      <td>100%</td>
+                      <td>200</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/zen-studio/apple-maps-scraper-pro" target="_blank" rel="noopener"><strong>zen-studio/apple-maps-scraper-pro</strong></a></td>
+                      <td>$3.99</td>
+                      <td>$3.29</td>
+                      <td>Yes</td>
+                      <td>3</td>
+                      <td>100%</td>
+                      <td>50</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/calm_builder/chrome-web-store-scraper" target="_blank" rel="noopener"><strong>calm_builder/chrome-web-store-scraper</strong></a></td>
+                      <td>$1.20</td>
+                      <td>$0.50</td>
+                      <td>Yes</td>
+                      <td>5</td>
+                      <td>100%</td>
+                      <td>45</td>
+                    </tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="panel">
+        <span class="pill pill-blue">LIVE STORE DATA READ 2026-11-28</span>
+        <h2>Website to Markdown RAG, YouTube Shorts, Apple App Store, Redfin Real Estate &amp; Shopify App Store</h2>
+        <p style="color:var(--muted)">256MB zero-browser breakout Actors: 10x leaner LLM Markdown+RAG+llms.txt crawler ($1.50/1K), YouTube Shorts at 2.6x lower cost than $4/1K rivals, dedicated iOS App Store charts &amp; reviews ($1/1K), direct Redfin GIS real estate JSON ($2/1K), and Turbo-Frame Shopify App Store intelligence ($2/1K) — all with $0 start fee.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Actor</th><th>Free / 1K</th><th>Gold / 1K</th><th>Start Fee</th><th>Billable Events</th><th>30d Success</th><th>Monthly Users</th></tr></thead>
+          <tbody>
+            <tr class="">
+                      <td><a href="https://apify.com/apify/website-content-crawler" target="_blank" rel="noopener"><strong>apify/website-content-crawler</strong></a></td>
+                      <td>Usage</td>
+                      <td>-</td>
+                      <td>No ($0)</td>
+                      <td>0</td>
+                      <td>97%</td>
+                      <td>11,948</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/streamers/youtube-shorts-scraper" target="_blank" rel="noopener"><strong>streamers/youtube-shorts-scraper</strong></a></td>
+                      <td>$4.00</td>
+                      <td>$2.40</td>
+                      <td>No ($0)</td>
+                      <td>2</td>
+                      <td>100%</td>
+                      <td>940</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/wulfcare/app-store-scraper" target="_blank" rel="noopener"><strong>wulfcare/app-store-scraper</strong></a></td>
+                      <td>$0.10</td>
+                      <td>$0.10</td>
+                      <td>No ($0)</td>
+                      <td>3</td>
+                      <td>100%</td>
+                      <td>184</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/tri_angle/redfin-search" target="_blank" rel="noopener"><strong>tri_angle/redfin-search</strong></a></td>
+                      <td>$0.50</td>
+                      <td>$0.40</td>
+                      <td>No ($0)</td>
+                      <td>2</td>
+                      <td>100%</td>
+                      <td>129</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/applora/shopify-appstore-scraper" target="_blank" rel="noopener"><strong>applora/shopify-appstore-scraper</strong></a></td>
+                      <td>$5.00</td>
+                      <td>$2.90</td>
+                      <td>Yes</td>
+                      <td>2</td>
+                      <td>90%</td>
+                      <td>47</td>
+                    </tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="panel">
+        <span class="pill pill-blue">LIVE STORE DATA READ 2026-11-28</span>
+        <h2>Google Play Store, Craigslist Deals, Twitch GraphQL, RSS Monitor &amp; Bulk Domain WHOIS/DNS/SSL</h2>
+        <p style="color:var(--muted)">High-frequency 256MB APIs built for scheduled n8n &amp; AI workflows: Google Play exact installs + dev emails ($1/1K), direct Craigslist SAPI ($1.50/1K vs $1.80-$6/1K), Twitch GraphQL channels/socials/streams ($1.50/1K vs $3/1K + start), zero-anti-bot RSS/Atom monitor ($1.50/1K vs $2/1K + start), and RDAP/WHOIS/DNS/DMARC/SSL checker ($2/1K vs $3/1K + start) — all with $0 start fee.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Actor</th><th>Free / 1K</th><th>Gold / 1K</th><th>Start Fee</th><th>Billable Events</th><th>30d Success</th><th>Monthly Users</th></tr></thead>
+          <tbody>
+            <tr class="">
+                      <td><a href="https://apify.com/automation-lab/google-play-scraper" target="_blank" rel="noopener"><strong>automation-lab/google-play-scraper</strong></a></td>
+                      <td>$0.70</td>
+                      <td>$0.56</td>
+                      <td>No ($0)</td>
+                      <td>3</td>
+                      <td>97%</td>
+                      <td>294</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/solidcode/craigslist-scraper" target="_blank" rel="noopener"><strong>solidcode/craigslist-scraper</strong></a></td>
+                      <td>$1.80</td>
+                      <td>$1.30</td>
+                      <td>Yes</td>
+                      <td>2</td>
+                      <td>100%</td>
+                      <td>145</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/automation-lab/twitch-scraper" target="_blank" rel="noopener"><strong>automation-lab/twitch-scraper</strong></a></td>
+                      <td>$3.00</td>
+                      <td>$2.40</td>
+                      <td>No ($0)</td>
+                      <td>5</td>
+                      <td>99%</td>
+                      <td>171</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/santamaria-automations/rss-feed-reader" target="_blank" rel="noopener"><strong>santamaria-automations/rss-feed-reader</strong></a></td>
+                      <td>$2.00</td>
+                      <td>$1.40</td>
+                      <td>No ($0)</td>
+                      <td>2</td>
+                      <td>98%</td>
+                      <td>66</td>
+                    </tr>
+<tr class="">
+                      <td><a href="https://apify.com/santamaria-automations/domain-whois-dns" target="_blank" rel="noopener"><strong>santamaria-automations/domain-whois-dns</strong></a></td>
+                      <td>$3.00</td>
+                      <td>$2.10</td>
+                      <td>No ($0)</td>
+                      <td>2</td>
+                      <td>100%</td>
+                      <td>34</td>
+                    </tr>
+          </tbody>
+        </table></div>
+      </div></main>
+  <footer>
+    Built by <a href="https://apify.com/leopoldsaint" target="_blank" rel="noopener">Leopold Saint on Apify Store</a> ·
+    <a href="https://github.com/ketannsaint/apify-browserless-scrapers" target="_blank" rel="noopener">GitHub &amp; 22 n8n JSON Templates</a> ·
+    MCP: <code>https://mcp.apify.com</code> · Updated 2026-11-28
+  </footer>
+</body>
+</html>

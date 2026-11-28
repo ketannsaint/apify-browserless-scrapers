@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Apple App Store &amp; iOS Reviews Scraper — Browserless Apify API ($1.00/1K, No Start Fee)</title>
+  <meta name="description" content="Scrape iOS App Store metadata, Top Free/Paid/Grossing charts across 40+ countries &amp; star-filtered user reviews directly at 256MB with zero start fee."/>
+  <link rel="canonical" href="https://ketannsaint.github.io/apify-browserless-scrapers/actors/apple-app-store-scraper.html"/>
+  <meta property="og:title" content="Apple App Store &amp; iOS Reviews Scraper — Browserless Apify API ($1.00/1K, No Start Fee)"/>
+  <meta property="og:description" content="Scrape iOS App Store metadata, Top Free/Paid/Grossing charts across 40+ countries &amp; star-filtered user reviews directly at 256MB with zero start fee."/>
+  <meta property="og:url" content="https://ketannsaint.github.io/apify-browserless-scrapers/actors/apple-app-store-scraper.html"/>
+  <meta property="og:type" content="website"/>
+  <style>
+:root { --bg:#0b1020; --panel:#121933; --border:#243056; --text:#e8eefc; --muted:#9fb0d9; --accent:#38bdf8; --green:#10b981; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+header { border-bottom:1px solid var(--border); background:#0f162d; position:sticky; top:0; z-index:10; }
+.nav { max-width:1100px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.brand { font-weight:700; color:#fff; text-decoration:none; font-size:1.05rem; }
+.nav-links { display:flex; gap:16px; flex-wrap:wrap; font-size:.9rem; }
+.nav-links a { color:var(--muted); text-decoration:none; }
+.nav-links a:hover { color:var(--accent); }
+.wrap { max-width:1100px; margin:0 auto; padding:32px 20px 64px; }
+.hero { background:linear-gradient(135deg,#132145,#0e1b35); border:1px solid var(--border); border-radius:16px; padding:32px; margin-bottom:28px; }
+.hero h1 { margin:0 0 10px; font-size:2rem; line-height:1.2; }
+.hero p { color:var(--muted); margin:0 0 20px; font-size:1.02rem; }
+.cta-row { display:flex; gap:12px; flex-wrap:wrap; }
+.btn { display:inline-block; padding:10px 16px; border-radius:10px; font-weight:600; text-decoration:none; font-size:.9rem; cursor:pointer; border:none; }
+.btn-primary { background:var(--accent); color:#071324; }
+.btn-secondary { border:1px solid var(--border); color:#fff; background:rgba(255,255,255,.04); }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:18px 0 32px; }
+.card { background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:20px; display:flex; flex-direction:column; justify-content:space-between; }
+.card h3 { margin:0 0 8px; font-size:1.05rem; }
+.card p { margin:0 0 14px; color:var(--muted); font-size:.9rem; }
+.pill { display:inline-block; font-size:.73rem; font-weight:700; padding:3px 9px; border-radius:999px; background:rgba(16,185,129,.15); color:#6ee7b7; margin-bottom:8px; }
+.pill-blue { background:rgba(56,189,248,.15); color:#7dd3fc; }
+article, .panel { background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:28px; margin-bottom:22px; }
+article h1 { margin-top:0; font-size:1.85rem; }
+article h2 { margin-top:26px; padding-top:16px; border-top:1px solid var(--border); font-size:1.28rem; }
+article a, .panel a { color:var(--accent); }
+pre { background:#070b17; border:1px solid var(--border); border-radius:10px; padding:16px; overflow-x:auto; font-size:.84rem; }
+code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; background:rgba(56,189,248,.12); padding:2px 5px; border-radius:5px; font-size:.88em; }
+pre code { background:none; padding:0; }
+.table-wrap { overflow-x:auto; margin:14px 0; }
+table { width:100%; border-collapse:collapse; font-size:.89rem; }
+th,td { border:1px solid var(--border); padding:10px 12px; text-align:left; }
+th { background:#0d1429; color:#fff; }
+tr.ours { background:rgba(16,185,129,.08); }
+blockquote { border-left:3px solid var(--accent); margin:16px 0; padding:8px 16px; background:rgba(56,189,248,.06); color:#d8e6ff; }
+input, select { background:#070b17; color:#fff; border:1px solid var(--border); border-radius:8px; padding:9px 12px; font-size:.95rem; }
+.calc-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin:16px 0; }
+.stat-box { background:#0a1126; border:1px solid var(--border); border-radius:12px; padding:16px; }
+.stat-num { font-size:1.75rem; font-weight:800; color:#6ee7b7; }
+footer { border-top:1px solid var(--border); color:var(--muted); font-size:.86rem; padding:24px 20px; text-align:center; }
+footer a { color:var(--accent); }
+</style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Apple App Store & iOS Reviews Scraper","applicationCategory":"DeveloperApplication","operatingSystem":"Cloud / Web API","url":"https://apify.com/leopoldsaint/apple-app-store-scraper","offers":{"@type":"Offer","price":"0.00100","priceCurrency":"USD"}}</script>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="https://ketannsaint.github.io/apify-browserless-scrapers/">Browserless Apify Scrapers (60)</a>
+      <div class="nav-links">
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/">Catalog</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/compare.html">Honest Comparisons</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/calculator.html">Cost Calculator</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/guides/google-maps-reddit-lead-engine.html">Guides</a>
+        <a href="https://apify.com/leopoldsaint" target="_blank" rel="noopener">Apify Store ↗</a>
+      </div>
+    </nav>
+  </header>
+  <main class="wrap">
+      <section class="hero">
+        <span class="pill">SEO &amp; MARKET INTEL · 256MB · $0 START FEE</span>
+        <h1>Apple App Store &amp; iOS Reviews Scraper</h1>
+        <p>Scrape iOS App Store metadata, Top Free/Paid/Grossing charts across 40+ countries &amp; star-filtered user reviews directly at 256MB with zero start fee.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/apple-app-store-scraper" target="_blank" rel="noopener">Run Free on Apify Store ↗</a>
+          <a class="btn btn-secondary" href="https://ketannsaint.github.io/apify-browserless-scrapers/calculator.html">Estimate Run Cost</a>
+          <a class="btn btn-secondary" href="https://ketannsaint.github.io/apify-browserless-scrapers/compare.html">Compare Competitors</a>
+        </div>
+      </section>
+      <div class="panel">
+        <h2>Transparent Pay-Per-Event Pricing</h2>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Plan Tier</th><th>Price per 1,000 Results</th><th>Start Fee</th><th>Platform Usage</th></tr></thead>
+          <tbody>
+            <tr class="ours"><td>Free (No discount)</td><td><strong>$1.00</strong></td><td>$0.00</td><td>Included</td></tr>
+            <tr><td>Gold / Business+</td><td><strong>$0.55</strong></td><td>$0.00</td><td>Included</td></tr>
+          </tbody>
+        </table></div>
+        <h2>1-Request REST API / n8n / Make</h2>
+        <pre><code>curl -X POST &quot;https://api.apify.com/v2/acts/leopoldsaint~apple-app-store-scraper/run-sync-get-dataset-items?token=$APIFY_TOKEN&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{&quot;mode&quot;:&quot;apps_and_reviews&quot;,&quot;appIdsOrUrls&quot;:[&quot;570060128&quot;],&quot;country&quot;:&quot;us&quot;,&quot;maxReviewsPerApp&quot;:5,&quot;maxItems&quot;:10}'</code></pre>
+        <h2>Connect to Claude, Cursor &amp; AI Agents via Apify MCP</h2>
+        <pre><code>{
+  &quot;mcpServers&quot;: {
+    &quot;apple-app-store-scraper&quot;: {
+      &quot;url&quot;: &quot;https://mcp.apify.com?tools=leopoldsaint/apple-app-store-scraper&quot;
+    }
+  }
+}</code></pre>
+      </div></main>
+  <footer>
+    Built by <a href="https://apify.com/leopoldsaint" target="_blank" rel="noopener">Leopold Saint on Apify Store</a> ·
+    <a href="https://github.com/ketannsaint/apify-browserless-scrapers" target="_blank" rel="noopener">GitHub &amp; 22 n8n JSON Templates</a> ·
+    MCP: <code>https://mcp.apify.com</code> · Updated 2026-11-28
+  </footer>
+</body>
+</html>

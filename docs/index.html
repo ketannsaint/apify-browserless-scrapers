@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>60 Fast Browserless Apify Scrapers — No Start Fee, Live Comparisons &amp; n8n JSON Templates</title>
+  <meta name="description" content="60 direct-HTTP &amp; native Apify Actors with $0 start fees, honest live competitor pricing comparisons, interactive cost calculator, 22 importable n8n workflows, and MCP configs."/>
+  <link rel="canonical" href="https://ketannsaint.github.io/apify-browserless-scrapers/"/>
+  <meta property="og:title" content="60 Fast Browserless Apify Scrapers — No Start Fee, Live Comparisons &amp; n8n JSON Templates"/>
+  <meta property="og:description" content="60 direct-HTTP &amp; native Apify Actors with $0 start fees, honest live competitor pricing comparisons, interactive cost calculator, 22 importable n8n workflows, and MCP configs."/>
+  <meta property="og:url" content="https://ketannsaint.github.io/apify-browserless-scrapers/"/>
+  <meta property="og:type" content="website"/>
+  <style>
+:root { --bg:#0b1020; --panel:#121933; --border:#243056; --text:#e8eefc; --muted:#9fb0d9; --accent:#38bdf8; --green:#10b981; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+header { border-bottom:1px solid var(--border); background:#0f162d; position:sticky; top:0; z-index:10; }
+.nav { max-width:1100px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.brand { font-weight:700; color:#fff; text-decoration:none; font-size:1.05rem; }
+.nav-links { display:flex; gap:16px; flex-wrap:wrap; font-size:.9rem; }
+.nav-links a { color:var(--muted); text-decoration:none; }
+.nav-links a:hover { color:var(--accent); }
+.wrap { max-width:1100px; margin:0 auto; padding:32px 20px 64px; }
+.hero { background:linear-gradient(135deg,#132145,#0e1b35); border:1px solid var(--border); border-radius:16px; padding:32px; margin-bottom:28px; }
+.hero h1 { margin:0 0 10px; font-size:2rem; line-height:1.2; }
+.hero p { color:var(--muted); margin:0 0 20px; font-size:1.02rem; }
+.cta-row { display:flex; gap:12px; flex-wrap:wrap; }
+.btn { display:inline-block; padding:10px 16px; border-radius:10px; font-weight:600; text-decoration:none; font-size:.9rem; cursor:pointer; border:none; }
+.btn-primary { background:var(--accent); color:#071324; }
+.btn-secondary { border:1px solid var(--border); color:#fff; background:rgba(255,255,255,.04); }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:18px 0 32px; }
+.card { background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:20px; display:flex; flex-direction:column; justify-content:space-between; }
+.card h3 { margin:0 0 8px; font-size:1.05rem; }
+.card p { margin:0 0 14px; color:var(--muted); font-size:.9rem; }
+.pill { display:inline-block; font-size:.73rem; font-weight:700; padding:3px 9px; border-radius:999px; background:rgba(16,185,129,.15); color:#6ee7b7; margin-bottom:8px; }
+.pill-blue { background:rgba(56,189,248,.15); color:#7dd3fc; }
+article, .panel { background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:28px; margin-bottom:22px; }
+article h1 { margin-top:0; font-size:1.85rem; }
+article h2 { margin-top:26px; padding-top:16px; border-top:1px solid var(--border); font-size:1.28rem; }
+article a, .panel a { color:var(--accent); }
+pre { background:#070b17; border:1px solid var(--border); border-radius:10px; padding:16px; overflow-x:auto; font-size:.84rem; }
+code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; background:rgba(56,189,248,.12); padding:2px 5px; border-radius:5px; font-size:.88em; }
+pre code { background:none; padding:0; }
+.table-wrap { overflow-x:auto; margin:14px 0; }
+table { width:100%; border-collapse:collapse; font-size:.89rem; }
+th,td { border:1px solid var(--border); padding:10px 12px; text-align:left; }
+th { background:#0d1429; color:#fff; }
+tr.ours { background:rgba(16,185,129,.08); }
+blockquote { border-left:3px solid var(--accent); margin:16px 0; padding:8px 16px; background:rgba(56,189,248,.06); color:#d8e6ff; }
+input, select { background:#070b17; color:#fff; border:1px solid var(--border); border-radius:8px; padding:9px 12px; font-size:.95rem; }
+.calc-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin:16px 0; }
+.stat-box { background:#0a1126; border:1px solid var(--border); border-radius:12px; padding:16px; }
+.stat-num { font-size:1.75rem; font-weight:800; color:#6ee7b7; }
+footer { border-top:1px solid var(--border); color:var(--muted); font-size:.86rem; padding:24px 20px; text-align:center; }
+footer a { color:var(--accent); }
+</style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Browserless Apify Scrapers Hub","url":"https://ketannsaint.github.io/apify-browserless-scrapers/"}</script>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="https://ketannsaint.github.io/apify-browserless-scrapers/">Browserless Apify Scrapers (60)</a>
+      <div class="nav-links">
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/">Catalog</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/compare.html">Honest Comparisons</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/calculator.html">Cost Calculator</a>
+        <a href="https://ketannsaint.github.io/apify-browserless-scrapers/guides/google-maps-reddit-lead-engine.html">Guides</a>
+        <a href="https://apify.com/leopoldsaint" target="_blank" rel="noopener">Apify Store ↗</a>
+      </div>
+    </nav>
+  </header>
+  <main class="wrap">
+      <section class="hero">
+        <span class="pill pill-blue">60 BROWSERLESS ACTORS · $0 START FEE ON DIRECT ACTORS · MCP &amp; N8N READY</span>
+        <h1>Fast Browserless Web Data Actors for AI Agents, n8n &amp; Lead Generation</h1>
+        <p>Zero Chromium timeouts. Zero start fees on all 57 direct Actors. Zero stacked email-enrichment or filter surcharges. Built for REST APIs, Claude/Cursor MCP, n8n, Make, and Zapier.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint" target="_blank" rel="noopener">Browse All 60 Actors on Apify Store ↗</a>
+          <a class="btn btn-secondary" href="compare.html">Honest Competitor Price Comparisons →</a>
+          <a class="btn btn-secondary" href="calculator.html">Interactive Cost Calculator →</a>
+        </div>
+      </section>
+
+      <h2>All 60 Browserless Actors</h2>
+      <div class="grid">
+      <div class="card">
+        <div>
+          <span class="pill">Lead Gen · $1.50/1K · $0 start</span>
+          <h3><a href="actors/google-maps-leads-scraper.html" style="color:#fff;text-decoration:none;">Google Maps Scraper — Leads &amp; Emails</a></h3>
+          <p>Direct Google Maps places, phones &amp; ratings with built-in homepage + /contact website email, social &amp; tech enrichment included free.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/google-maps-leads-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/google-maps-leads-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Lead Gen · $8.00/1K · $0 start</span>
+          <h3><a href="actors/businesses-without-websites-leads.html" style="color:#fff;text-decoration:none;">Businesses Without Websites Leads</a></h3>
+          <p>Find established Google Maps businesses with no website, broken sites, HTTP-only links, or social-only profiles. Healthy custom HTTPS sites skipped free.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/businesses-without-websites-leads" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/businesses-without-websites-leads.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Lead Gen · $3.00/1K · $0 start</span>
+          <h3><a href="actors/website-contact-email-scraper.html" style="color:#fff;text-decoration:none;">Website Contact &amp; Email Scraper</a></h3>
+          <p>SSRF-hardened multi-page domain crawler extracting domain-ranked emails, phones, 10 social links, JSON-LD addresses &amp; 30+ tech signals.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/website-contact-email-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/website-contact-email-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Lead Gen · $2.50/1K · $0 start</span>
+          <h3><a href="actors/website-tech-stack-detector.html" style="color:#fff;text-decoration:none;">Website Tech Stack Detector</a></h3>
+          <p>Detect 75+ CMS, ecommerce, analytics, ad pixels, CRM, payments &amp; CDN technologies plus AI Search Readiness (llms.txt, GPTBot/ClaudeBot, JSON-LD).</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/website-tech-stack-detector" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/website-tech-stack-detector.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Lead Gen · $6.00/1K · $0 start</span>
+          <h3><a href="actors/y-combinator-companies-scraper.html" style="color:#fff;text-decoration:none;">Y Combinator Companies Scraper</a></h3>
+          <p>Filter 6,400+ Y Combinator startups by batch, industry, tags, team size &amp; hiring status with optional free website email &amp; social enrichment.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/y-combinator-companies-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/y-combinator-companies-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Lead Gen · $12.00/1K · $0 start</span>
+          <h3><a href="actors/sec-edgar-form-d-funding-scraper.html" style="color:#fff;text-decoration:none;">SEC EDGAR Form D Funding Scraper</a></h3>
+          <p>Extract newly funded US startups directly from official SEC EDGAR Form D XML filings: amount raised, executives, phone, state &amp; industry.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/sec-edgar-form-d-funding-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/sec-edgar-form-d-funding-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Lead Gen · $4.00/1K · $0 start</span>
+          <h3><a href="actors/career-site-jobs-scraper.html" style="color:#fff;text-decoration:none;">Career Site &amp; ATS Jobs Scraper</a></h3>
+          <p>Direct official JSON scraping of Greenhouse, Lever, Ashby &amp; remote job boards (Remotive, Himalayas, Jobicy, Arbeitnow) with parsed USD salaries.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/career-site-jobs-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/career-site-jobs-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">E-commerce · $6.00/1K · $0 start</span>
+          <h3><a href="actors/shopify-store-analyzer-leads.html" style="color:#fff;text-decoration:none;">Shopify Store Analyzer &amp; Leads</a></h3>
+          <p>Native Shopify verification, 45+ app detection (Klaviyo, Recharge, Okendo, Smile), theme, catalog price stats &amp; domain-matched contact emails.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/shopify-store-analyzer-leads" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/shopify-store-analyzer-leads.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">E-commerce · $120.00/1K · PPE</span>
+          <h3><a href="actors/shopify-active-ads-lead-finder.html" style="color:#fff;text-decoration:none;">Shopify Stores Running Meta Ads</a></h3>
+          <p>Find verified Shopify stores actively spending on Meta Ads today with live ad evidence links, verified emails, missing-app gaps &amp; fit scores.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/shopify-active-ads-lead-finder" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/shopify-active-ads-lead-finder.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Video &amp; AI/RAG · $3.00/1K · $0 start</span>
+          <h3><a href="actors/youtube-transcript-scraper.html" style="color:#fff;text-decoration:none;">YouTube Transcript Scraper</a></h3>
+          <p>Fast InnerTube transcript extractor outputting clean plain text, timestamped RAG segments, SRT/VTT &amp; translations. Captionless videos skipped free.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/youtube-transcript-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/youtube-transcript-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Video &amp; AI/RAG · $2.50/1K · $0 start</span>
+          <h3><a href="actors/youtube-video-channel-scraper.html" style="color:#fff;text-decoration:none;">YouTube Video &amp; Channel Scraper</a></h3>
+          <p>Search, channel Videos/Shorts/Streams &amp; playlists with exact views, likes, subscriber counts, descriptions &amp; FREE upload-date filters.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/youtube-video-channel-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/youtube-video-channel-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Video &amp; AI/RAG · $2.00/1K · $0 start</span>
+          <h3><a href="actors/youtube-comments-scraper.html" style="color:#fff;text-decoration:none;">YouTube Comments Scraper</a></h3>
+          <p>Pure InnerTube YouTube comments &amp; nested replies with top/newest sorting, likes, pinned/hearted flags, and keyword/minLikes filtering.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/youtube-comments-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/youtube-comments-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Video &amp; AI/RAG · $15.00/1K · $0 start</span>
+          <h3><a href="actors/youtube-channel-email-scraper.html" style="color:#fff;text-decoration:none;">YouTube Channel Email Scraper</a></h3>
+          <p>Discover YouTube creators by niche with subscriber metrics, social handles &amp; public business emails from bios, linked sites &amp; video descriptions.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/youtube-channel-email-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/youtube-channel-email-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Social &amp; Communities · $1.50/1K · $0 start</span>
+          <h3><a href="actors/reddit-scraper-fast.html" style="color:#fff;text-decoration:none;">Reddit Scraper — Posts &amp; Comments</a></h3>
+          <p>Zero-browser Reddit scraper for keyword search, subreddit feeds, nested comment trees &amp; user profiles with automatic residential fallback.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/reddit-scraper-fast" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/reddit-scraper-fast.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Social &amp; Communities · $2.00/1K · $0 start</span>
+          <h3><a href="actors/pinterest-scraper-fast.html" style="color:#fff;text-decoration:none;">Pinterest Scraper — Pins &amp; Boards</a></h3>
+          <p>Extract organic Pinterest pins, search feeds, profiles &amp; boards without login, filtering promoted ads and extracting outbound store domains.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/pinterest-scraper-fast" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/pinterest-scraper-fast.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Social &amp; Communities · $1.50/1K · $0 start</span>
+          <h3><a href="actors/telegram-channel-scraper-fast.html" style="color:#fff;text-decoration:none;">Telegram Channel Scraper</a></h3>
+          <p>Scrape public Telegram channels with full historical pagination, views, media, outbound links, hashtags, forwards &amp; reactions — no login or API key.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/telegram-channel-scraper-fast" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/telegram-channel-scraper-fast.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">SEO &amp; Market Intel · $2.50/1K · $0 start</span>
+          <h3><a href="actors/google-ads-transparency-scraper.html" style="color:#fff;text-decoration:none;">Google Ads Transparency Scraper</a></h3>
+          <p>Flat per-creative Google Ads Transparency Center scraper for competitor search, display &amp; YouTube video ads across regions.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/google-ads-transparency-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/google-ads-transparency-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">SEO &amp; Market Intel · $1.00/1K · $0 start</span>
+          <h3><a href="actors/google-autocomplete-keyword-scraper.html" style="color:#fff;text-decoration:none;">Google &amp; 5-Engine Autocomplete</a></h3>
+          <p>Expand long-tail keywords across Google, YouTube, Amazon, Bing &amp; DuckDuckGo with A-Z alphabet soup, question prefixes &amp; search intent tagging.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/google-autocomplete-keyword-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/google-autocomplete-keyword-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">SEO &amp; Market Intel · $3.50/1K · $0 start</span>
+          <h3><a href="actors/google-trends-scraper-fast.html" style="color:#fff;text-decoration:none;">Google Trends Scraper</a></h3>
+          <p>Direct Google Trends interest timelines, geo breakdowns, top/rising related queries &amp; Daily Trending RSS with computed momentum percentages.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/google-trends-scraper-fast" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/google-trends-scraper-fast.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">SEO &amp; Market Intel · $2.50/1K · $0 start</span>
+          <h3><a href="actors/google-news-scraper-fast.html" style="color:#fff;text-decoration:none;">Google News Scraper</a></h3>
+          <p>Fast Google News scraper with built-in canonical publisher URL decoding (no opaque google.com redirect links) included in one flat rate.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/google-news-scraper-fast" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/google-news-scraper-fast.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">SEO &amp; Market Intel · $2.00/1K · $0 start</span>
+          <h3><a href="actors/app-store-google-play-scraper.html" style="color:#fff;text-decoration:none;">App Store &amp; Google Play Scraper</a></h3>
+          <p>Unified Apple App Store + Google Play scraper returning exact Android realInstalls, developer emails &amp; star-filtered iOS/Android user reviews.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/app-store-google-play-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/app-store-google-play-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Travel &amp; E-commerce · $1.00/1K · $0 start</span>
+          <h3><a href="actors/google-flights-scraper-fast.html" style="color:#fff;text-decoration:none;">Google Flights Scraper</a></h3>
+          <p>Deterministic protobuf Google Flights fare scanner supporting multi-date ranges, nonstop/price filters &amp; live airline itineraries.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/google-flights-scraper-fast" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/google-flights-scraper-fast.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Travel &amp; E-commerce · $2.50/1K · $0 start</span>
+          <h3><a href="actors/pinterest-trends-scraper.html" style="color:#fff;text-decoration:none;">Pinterest Trends Scraper</a></h3>
+          <p>Extract 53-week Pinterest Trends search interest history, YoY/MoM growth rates, momentum scores &amp; seasonal launch windows across 11 markets.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/pinterest-trends-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/pinterest-trends-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Travel &amp; E-commerce · $30.00/1K · PPE</span>
+          <h3><a href="actors/pinterest-etsy-trend-gap-finder.html" style="color:#fff;text-decoration:none;">Etsy Trend Gap Finder</a></h3>
+          <p>Combines rising 53-week Pinterest Trends demand with live Etsy competition counts to score low-competition product gaps with seasonal list-by dates.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/pinterest-etsy-trend-gap-finder" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/pinterest-etsy-trend-gap-finder.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Travel &amp; E-commerce · $50.00/1K · PPE</span>
+          <h3><a href="actors/tiktok-amazon-product-gap-finder.html" style="color:#fff;text-decoration:none;">TikTok Shop to Amazon Gap Finder</a></h3>
+          <p>Cross-checks high-velocity TikTok Shop products against isolated live Amazon competition &amp; review moats with honest crowded/emerging/wide-open verdicts.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/tiktok-amazon-product-gap-finder" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/tiktok-amazon-product-gap-finder.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Social &amp; Communities · $1.80/1K · $0 start</span>
+          <h3><a href="actors/threads-scraper.html" style="color:#fff;text-decoration:none;">Threads Scraper — Posts, Profiles &amp; Search</a></h3>
+          <p>Scrape public Meta Threads profiles, posts, replies, media URLs &amp; keyword search without login or headless browser.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/threads-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/threads-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Social &amp; Communities · $2.00/1K · $0 start</span>
+          <h3><a href="actors/snapchat-scraper.html" style="color:#fff;text-decoration:none;">Snapchat Scraper — Profiles &amp; Spotlights</a></h3>
+          <p>Extract public Snapchat subscriber counts, Spotlight video metrics (views, shares, comments), direct video URLs, highlights &amp; lenses at 256MB.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/snapchat-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/snapchat-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Lead Gen · $0.90/1K · $0 start</span>
+          <h3><a href="actors/bulk-email-verifier.html" style="color:#fff;text-decoration:none;">Bulk Email Verifier — MX, SPF &amp; DMARC</a></h3>
+          <p>Verify cold email lists with RFC syntax, typo suggestions, 200+ disposable domains, role flags, live MX/SPF/DMARC &amp; provider fingerprinting.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/bulk-email-verifier" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/bulk-email-verifier.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Video &amp; AI/RAG · $6.00/1K · $0 start</span>
+          <h3><a href="actors/audio-video-podcast-transcriber.html" style="color:#fff;text-decoration:none;">Audio, Video &amp; Podcast Transcriber (Whisper AI)</a></h3>
+          <p>Transcribe Podcast RSS, Apple Podcasts, YouTube &amp; direct MP3/MP4/WAV URLs into text, opening hooks, timestamps, SRT, VTT &amp; Markdown with built-in Whisper AI.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/audio-video-podcast-transcriber" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/audio-video-podcast-transcriber.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Video &amp; AI/RAG · $2.00/1K · $0 start</span>
+          <h3><a href="actors/video-frame-extractor.html" style="color:#fff;text-decoration:none;">Video Frame Extractor — Scenes &amp; Keyframes</a></h3>
+          <p>Extract crisp PNG/JPEG/WebP still frames from MP4/WebM/MOV or Snapchat Spotlight videos by interval, evenly spaced, scene change, keyframes or timestamps for Vision LLMs.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/video-frame-extractor" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/video-frame-extractor.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Lead Gen · $1.00/1K · $0 start</span>
+          <h3><a href="actors/linkedin-jobs-scraper.html" style="color:#fff;text-decoration:none;">LinkedIn Jobs Scraper — No Cookies</a></h3>
+          <p>Scrape public LinkedIn job postings by keyword, location, remote mode &amp; date posted with full job descriptions, seniority &amp; parsed salaries — zero cookies.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/linkedin-jobs-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/linkedin-jobs-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">E-commerce · $1.50/1K · $0 start</span>
+          <h3><a href="actors/amazon-search-scraper.html" style="color:#fff;text-decoration:none;">Amazon Product Search Scraper</a></h3>
+          <p>Scrape Amazon product search results across 10 marketplaces: ASIN, price, discount %, rating, reviews, monthly sales badges, Prime &amp; sponsored flags.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/amazon-search-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/amazon-search-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">E-commerce · $2.00/1K · $0 start</span>
+          <h3><a href="actors/amazon-bestsellers-scraper.html" style="color:#fff;text-decoration:none;">Amazon Best Sellers &amp; Movers Scraper</a></h3>
+          <p>Track #1-#50 Amazon Best Sellers, Hot New Releases, Movers &amp; Shakers, and Most Wished For charts across 10 marketplaces with zero start fee.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/amazon-bestsellers-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/amazon-bestsellers-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Travel &amp; E-commerce · $3.50/1K · $0 start</span>
+          <h3><a href="actors/google-hotels-scraper.html" style="color:#fff;text-decoration:none;">Google Hotels Scraper — Prices &amp; Deals</a></h3>
+          <p>Extract live Google Hotels nightly prices, total stay cost with taxes, GREAT DEAL badges, ratings, reviews &amp; amenities for any city and dates.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/google-hotels-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/google-hotels-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Video &amp; AI/RAG · $4.00/1K · $0 start</span>
+          <h3><a href="actors/pdf-text-table-extractor.html" style="color:#fff;text-decoration:none;">PDF Text &amp; Table Extractor — AI &amp; RAG</a></h3>
+          <p>Extract clean text, page-by-page JSON, structured Markdown, 2D JSON tables, metadata, links &amp; overlapping LLM RAG chunks from any public PDF URL.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/pdf-text-table-extractor" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/pdf-text-table-extractor.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Video &amp; AI/RAG · $8.00/1K · $0 start</span>
+          <h3><a href="actors/instagram-reels-transcript-scraper.html" style="color:#fff;text-decoration:none;">Instagram Reels Transcript Scraper (Whisper AI)</a></h3>
+          <p>Extract verbatim Whisper AI transcripts, opening 3s/10s hooks, SRT/VTT subtitles, speaking WPM &amp; engagement stats from Instagram Reels and @usernames without login or API keys.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/instagram-reels-transcript-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/instagram-reels-transcript-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Video &amp; AI/RAG · $20.00/1K · $0 start</span>
+          <h3><a href="actors/video-hook-script-breakdown.html" style="color:#fff;text-decoration:none;">Video Hook &amp; Script Breakdown AI</a></h3>
+          <p>Deconstruct Instagram Reels, YouTube videos, Snapchat Spotlights &amp; MP4 ads into 3s hooks, hook styles, Whisper transcripts, FFmpeg scene-cut shot lists, KVS keyframes &amp; creative briefs.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/video-hook-script-breakdown" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/video-hook-script-breakdown.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Social &amp; Media · $2.50/1K · $0 start</span>
+          <h3><a href="actors/instagram-video-downloader.html" style="color:#fff;text-decoration:none;">Instagram Video &amp; Reels Downloader</a></h3>
+          <p>Download public Instagram Reels, videos, carousels, thumbnails &amp; optional FFmpeg MP3 audio tracks into permanent Apify Key-Value Store URLs that never expire.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/instagram-video-downloader" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/instagram-video-downloader.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Lead Gen · $8.00/1K · $0 start</span>
+          <h3><a href="actors/instagram-email-contact-scraper.html" style="color:#fff;text-decoration:none;">Instagram Email &amp; Contact Scraper</a></h3>
+          <p>Extract public creator and business emails, phones, WhatsApp links, Linktree/Beacons hubs, bio websites &amp; follower stats from Instagram profiles without login.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/instagram-email-contact-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/instagram-email-contact-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">E-commerce · $2.00/1K · $0 start</span>
+          <h3><a href="actors/amazon-product-details-scraper.html" style="color:#fff;text-decoration:none;">Amazon Product Details Scraper (10 Markets)</a></h3>
+          <p>Scrape full Amazon /dp/ product pages by ASIN or URL across 10 marketplaces: buybox price, list price, BSR, variants, specs, bullets, seller, stock &amp; hi-res images.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/amazon-product-details-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/amazon-product-details-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">SEO &amp; Dev Tools · $3.00/1K · $0 start</span>
+          <h3><a href="actors/website-screenshot-pdf-api.html" style="color:#fff;text-decoration:none;">Website Screenshot, PDF &amp; OG Card API</a></h3>
+          <p>Capture full-page PNG/JPEG screenshots, print-ready A4 PDFs, and 1200x630 Open Graph cards from public URLs or raw HTML with dark mode and ad/cookie-banner blocking.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/website-screenshot-pdf-api" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/website-screenshot-pdf-api.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">SEO &amp; Dev Tools · $3.50/1K · $0 start</span>
+          <h3><a href="actors/pagespeed-cwv-seo-auditor.html" style="color:#fff;text-decoration:none;">PageSpeed Core Web Vitals &amp; SEO Auditor</a></h3>
+          <p>Run real Google Lighthouse Performance, Accessibility, Best Practices &amp; SEO audits in bulk with LCP, CLS, TBT, FCP, TTFB, on-page SEO checks &amp; AI readiness (llms.txt) — zero API quotas.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/pagespeed-cwv-seo-auditor" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/pagespeed-cwv-seo-auditor.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Video &amp; AI/RAG · $8.00/1K · $0 start</span>
+          <h3><a href="actors/bulk-image-downloader.html" style="color:#fff;text-decoration:none;">Bulk Image Downloader &amp; WebP Optimizer</a></h3>
+          <p>Download images from direct URLs or web pages to permanent Apify KVS links with sharp WebP/JPEG/PNG conversion, resizing, SHA-256 deduplication &amp; downloadable images.zip.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/bulk-image-downloader" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/bulk-image-downloader.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Social &amp; Media · $1.50/1K · $0 start</span>
+          <h3><a href="actors/instagram-profile-posts-reels-scraper.html" style="color:#fff;text-decoration:none;">Instagram Profile, Posts &amp; Reels Scraper</a></h3>
+          <p>Zero-login 256MB Instagram profile, posts, Reels &amp; carousel scraper returning follower counts, bio links, captions, hashtags, exact likes, comments &amp; media URLs.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/instagram-profile-posts-reels-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/instagram-profile-posts-reels-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Lead Gen · $8.00/1K · $0 start</span>
+          <h3><a href="actors/bbb-business-leads-scraper.html" style="color:#fff;text-decoration:none;">BBB Business Directory &amp; Leads Scraper</a></h3>
+          <p>Extract US &amp; Canada Better Business Bureau leads filtered by keyword, city, accreditation &amp; letter rating (A+ to F) with phones, addresses, categories &amp; service areas.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/bbb-business-leads-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/bbb-business-leads-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">E-commerce · $1.00/1K · $0 start</span>
+          <h3><a href="actors/shopify-store-products-scraper.html" style="color:#fff;text-decoration:none;">Shopify Store Products &amp; Catalog Scraper</a></h3>
+          <p>Extract full Shopify store product catalogs, variants, SKUs, prices, compare-at discounts, stock availability, detected currency &amp; images with zero start fee.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/shopify-store-products-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/shopify-store-products-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Finance &amp; Intel · $1.50/1K · $0 start</span>
+          <h3><a href="actors/yahoo-finance-scraper.html" style="color:#fff;text-decoration:none;">Yahoo Finance Stock, Crypto &amp; Financials Scraper</a></h3>
+          <p>Scrape live Yahoo Finance quotes, market cap, P/E ratios, financials, analyst targets, historical OHLCV bars, market screeners &amp; news for stocks, ETFs, crypto &amp; forex.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/yahoo-finance-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/yahoo-finance-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Lead Gen · $1.50/1K · $0 start</span>
+          <h3><a href="actors/remote-jobs-scraper.html" style="color:#fff;text-decoration:none;">Remote Jobs Aggregator &amp; Salary Scraper</a></h3>
+          <p>Aggregate and deduplicate live remote jobs across 6 major boards (Remotive, Himalayas, Jobicy, RemoteOK, We Work Remotely, Arbeitnow) with parsed USD salaries.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/remote-jobs-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/remote-jobs-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Lead Gen · $2.50/1K · $0 start</span>
+          <h3><a href="actors/apple-maps-leads-scraper.html" style="color:#fff;text-decoration:none;">Apple Maps Business Leads &amp; Emails Scraper</a></h3>
+          <p>Scrape Apple Maps local businesses by keyword and city with 2x2/3x3 coordinate grid tiling, phones, addresses, Yelp links &amp; built-in free website email extraction.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/apple-maps-leads-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/apple-maps-leads-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">SEO &amp; Dev Tools · $2.00/1K · $0 start</span>
+          <h3><a href="actors/chrome-web-store-scraper.html" style="color:#fff;text-decoration:none;">Chrome Web Store Extensions &amp; Developer Leads</a></h3>
+          <p>Scrape Chrome Web Store extensions by search, category or ID with exact user counts, ratings, versions, manifest permissions &amp; public developer emails/addresses.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/chrome-web-store-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/chrome-web-store-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Video &amp; AI/RAG · $1.50/1K · $0 start</span>
+          <h3><a href="actors/website-to-markdown-crawler.html" style="color:#fff;text-decoration:none;">Website to Markdown &amp; LLM RAG Crawler</a></h3>
+          <p>Fast 256MB browserless website and XML sitemap crawler converting pages into clean LLM-ready Markdown, metadata, overlapping RAG chunks &amp; an llms.txt index.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/website-to-markdown-crawler" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/website-to-markdown-crawler.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Video &amp; AI/RAG · $1.50/1K · $0 start</span>
+          <h3><a href="actors/youtube-shorts-scraper.html" style="color:#fff;text-decoration:none;">YouTube Shorts Scraper — Viral Metrics &amp; Channels</a></h3>
+          <p>Extract YouTube Shorts from @handle/shorts channels, search queries &amp; URLs with exact views, likes, like-to-view %, subscribers, hashtags &amp; caption flags.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/youtube-shorts-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/youtube-shorts-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">SEO &amp; Market Intel · $1.00/1K · $0 start</span>
+          <h3><a href="actors/apple-app-store-scraper.html" style="color:#fff;text-decoration:none;">Apple App Store &amp; iOS Reviews Scraper</a></h3>
+          <p>Scrape iOS App Store metadata, Top Free/Paid/Grossing charts across 40+ countries &amp; star-filtered user reviews directly at 256MB with zero start fee.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/apple-app-store-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/apple-app-store-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Real Estate &amp; Leads · $2.00/1K · $0 start</span>
+          <h3><a href="actors/redfin-real-estate-scraper.html" style="color:#fff;text-decoration:none;">Redfin Real Estate &amp; Property Listings Scraper</a></h3>
+          <p>Scrape US Redfin property listings by city or ZIP with map tiling, MLS numbers, prices, beds, baths, sqft, $/sqft, HOA, year built, DOM &amp; GPS coordinates.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/redfin-real-estate-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/redfin-real-estate-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">E-commerce · $2.00/1K · $0 start</span>
+          <h3><a href="actors/shopify-app-store-scraper.html" style="color:#fff;text-decoration:none;">Shopify App Store Scraper — Apps, Pricing &amp; Developers</a></h3>
+          <p>Scrape Shopify App Store listings by keyword, category or slug: ratings, reviews, Built for Shopify badge, pricing tiers, launch dates &amp; developer support emails.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/shopify-app-store-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/shopify-app-store-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">SEO &amp; Market Intel · $1.00/1K · $0 start</span>
+          <h3><a href="actors/google-play-store-scraper.html" style="color:#fff;text-decoration:none;">Google Play Store Apps &amp; Reviews Scraper</a></h3>
+          <p>Scrape Android app metadata (exact realInstalls, developer emails, websites, ratings, pricing) &amp; star-filtered paginated Play Store user reviews at 256MB.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/google-play-store-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/google-play-store-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">E-commerce · $1.50/1K · $0 start</span>
+          <h3><a href="actors/craigslist-scraper.html" style="color:#fff;text-decoration:none;">Craigslist Listings, Prices &amp; Deals Scraper</a></h3>
+          <p>Scrape live Craigslist classifieds across any city &amp; category via direct SAPI JSON: asking prices, titles, neighborhoods, GPS coordinates, photos &amp; URLs.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/craigslist-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/craigslist-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">Social &amp; Media · $1.50/1K · $0 start</span>
+          <h3><a href="actors/twitch-scraper.html" style="color:#fff;text-decoration:none;">Twitch Live Streams, Channels, Games &amp; VODs Scraper</a></h3>
+          <p>Scrape Twitch creator profiles (Discord/YouTube/X/Instagram links, followers, Partner badges), live streams, top games &amp; VODs via direct GraphQL at 256MB.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/twitch-scraper" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/twitch-scraper.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">SEO &amp; Market Intel · $1.50/1K · $0 start</span>
+          <h3><a href="actors/rss-feed-monitor.html" style="color:#fff;text-decoration:none;">RSS, Atom &amp; News Feed Scraper &amp; Monitor</a></h3>
+          <p>Parse &amp; monitor unlimited RSS 2.0, Atom &amp; Podcast feeds with automatic blog feed discovery, keyword/freshness filters &amp; optional full-article body extraction.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/rss-feed-monitor" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/rss-feed-monitor.html">Docs &amp; MCP</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="pill">SEO &amp; Dev Tools · $2.00/1K · $0 start</span>
+          <h3><a href="actors/domain-whois-dns-ssl-checker.html" style="color:#fff;text-decoration:none;">Bulk Domain WHOIS, RDAP, DNS, SSL &amp; Email Auth Checker</a></h3>
+          <p>Bulk audit domains for official IANA RDAP/WHOIS registrar, age &amp; expiry, live DNS/MX/SPF/DMARC email auth, mail provider &amp; TLS/SSL certificate expiry.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apify.com/leopoldsaint/domain-whois-dns-ssl-checker" target="_blank" rel="noopener">Run on Apify ↗</a>
+          <a class="btn btn-secondary" href="actors/domain-whois-dns-ssl-checker.html">Docs &amp; MCP</a>
+        </div>
+      </div></div>
+
+      <h2>22 Importable n8n Workflow JSON Templates</h2>
+      <div class="grid">
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>Google Maps Local Leads + Free Website Emails</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/google-maps-emails-to-sheets.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>Web Design Leads — Local Businesses Without Websites</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/businesses-without-websites-agency-leads.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>Reddit Buying-Intent &amp; Competitor Mention Monitor</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/reddit-buying-intent-alerts.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>YouTube Transcripts for AI RAG &amp; Summaries</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/youtube-transcript-ai-rag.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>Weekly Greenhouse &amp; Ashby Startup Hiring Signals</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/ats-hiring-signals-greenhouse-ashby.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>Weekly Newly Funded US Startups (SEC Form D)</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/sec-form-d-newly-funded-startups.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>Instagram Reels Whisper Transcripts &amp; 3s Hooks</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/instagram-reels-whisper-transcripts.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>Daily Amazon ASIN Buybox Price &amp; BSR Tracker</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/amazon-asin-price-bsr-monitor.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>New Y Combinator AI Startups + Emails Enrichment</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/yc-startups-with-emails.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>5-Engine SEO Autocomplete Keyword Expander</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/seo-autocomplete-keyword-expansion.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>Daily Shopify Competitor Product Price &amp; Stock Monitor</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/shopify-competitor-price-stock-monitor.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>Weekly Apple Maps Local Business Leads + Free Emails</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/apple-maps-local-leads-emails.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>Meta Threads Profile &amp; Keyword Monitor (No Login)</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/threads-brand-monitoring.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>Podcast &amp; Audio Whisper AI Transcription Pipeline</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/podcast-whisper-ai-transcription.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>Hourly Craigslist Local Deals &amp; Arbitrage Alerts</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/craigslist-local-deals-arbitrage-alerts.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>Daily RSS &amp; Atom AI News Digest Monitor</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/rss-ai-news-digest-monitor.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>Daily Remote LinkedIn Jobs Alerts (No Cookies)</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/linkedin-remote-jobs-alerts.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>Weekly Amazon Best Sellers &amp; Movers Tracker</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/amazon-bestsellers-price-tracker.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>Weekly Google Lighthouse Core Web Vitals &amp; SEO Monitor</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/pagespeed-lighthouse-cwv-monitor.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>Weekly BBB Accredited Local B2B Leads Feed</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/bbb-accredited-local-b2b-leads.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>Weekly Docs &amp; Website to Markdown RAG Sync</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/website-docs-to-markdown-rag-sync.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div>
+
+      <div class="card">
+        <div><span class="pill pill-blue">N8N TEMPLATE · PLAIN HTTP</span><h3>Daily Redfin US Real Estate Deal Alerts</h3><p>1-click importable JSON — no custom nodes required, paste your Apify token and schedule.</p></div>
+        <a class="btn btn-secondary" href="https://raw.githubusercontent.com/ketannsaint/apify-browserless-scrapers/main/n8n-workflows/redfin-us-real-estate-deal-alerts.json" target="_blank" rel="noopener">Download JSON ↗</a>
+      </div></div>
+
+      <h2>Developer Guides &amp; End-to-End Pipelines</h2>
+      <div class="grid"><div class="card"><div><span class="pill">LEAD GEN · MAPS + REDDIT</span><h3>Build a Zero-Browser Google Maps + Reddit B2B Lead &amp; Buying-Intent Engine in 5 Minutes (Node.js, Python &amp; n8n)</h3><p>Skip Puppeteer timeouts and stacked enrichment add-ons. Pull Google Maps local businesses with built-in website emails and monitor live Reddit buying-intent threads for $1.50/1K.</p></div><a class="btn btn-primary" href="guides/google-maps-reddit-lead-engine.html">Read Guide →</a></div>
+<div class="card"><div><span class="pill">AI / RAG · YOUTUBE STACK</span><h3>How to Build a Fast YouTube Search -&gt; Transcript -&gt; Comments AI Research Pipeline Without Puppeteer</h3><p>Skip slow headless browsers. Combine direct YouTube search, transcript extraction, comment sentiment, and creator emails in under 10 seconds with Node.js, Python, n8n, or MCP.</p></div><a class="btn btn-primary" href="guides/youtube-rag-pipeline.html">Read Guide →</a></div>
+<div class="card"><div><span class="pill">B2B OUTBOUND · ATS + ADS</span><h3>Direct ATS Hiring Signals + Live Ad Spend + Website Contact Enrichment Without Headless Browsers</h3><p>How B2B agencies and outbound teams combine Greenhouse/Lever/Ashby job openings, Google &amp; Meta ad proof, and flat-rate domain contact enrichment in a single automated pipeline.</p></div><a class="btn btn-primary" href="guides/b2b-lead-enrichment-pipeline.html">Read Guide →</a></div>
+<div class="card"><div><span class="pill">TRENDS · NEWS · APP REVIEWS</span><h3>Build a Cross-Channel Demand &amp; Competitor Radar: Google Trends, Pinterest Trends, Google News &amp; App Store Reviews</h3><p>Combine 4 fast HTTP Apify Actors to monitor rising search momentum, seasonal Pinterest peaks, decoded breaking news URLs, and 1-2 star iOS/Android competitor complaints.</p></div><a class="btn btn-primary" href="guides/market-intel-radar.html">Read Guide →</a></div></div></main>
+  <footer>
+    Built by <a href="https://apify.com/leopoldsaint" target="_blank" rel="noopener">Leopold Saint on Apify Store</a> ·
+    <a href="https://github.com/ketannsaint/apify-browserless-scrapers" target="_blank" rel="noopener">GitHub &amp; 22 n8n JSON Templates</a> ·
+    MCP: <code>https://mcp.apify.com</code> · Updated 2026-11-28
+  </footer>
+</body>
+</html>
